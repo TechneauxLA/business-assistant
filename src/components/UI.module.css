@@ -1,0 +1,168 @@
+/* ── Card ────────────────────────────────────────────────────── */
+.card {
+  background: var(--charcoal-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+/* ── Label ───────────────────────────────────────────────────── */
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mid-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* ── Metric card ─────────────────────────────────────────────── */
+.metricCard {
+  background: var(--charcoal-lt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  border-top: 3px solid var(--orange);
+}
+.metricLabel { font-size: 11px; color: var(--mid-gray); margin-bottom: 4px; font-weight: 500; }
+.metricValue { font-size: 22px; font-weight: 700; color: var(--white); line-height: 1; }
+.metricSub   { font-size: 11px; margin-top: 4px; }
+
+/* ── Pill ────────────────────────────────────────────────────── */
+.pill {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.pill_default { background: rgba(136,136,136,.12); color: var(--mid-gray); border: 1px solid rgba(136,136,136,.2); }
+.pill_good    { background: var(--green-bg); color: var(--green); border: 1px solid rgba(76,175,125,.3); }
+.pill_warn    { background: var(--amber-bg); color: var(--amber); border: 1px solid rgba(245,166,35,.3); }
+.pill_bad     { background: var(--red-bg);   color: var(--red);   border: 1px solid rgba(224,82,82,.3); }
+.pill_orange  { background: rgba(232,114,42,.15); color: var(--orange); border: 1px solid rgba(232,114,42,.3); }
+
+/* ── Chip ────────────────────────────────────────────────────── */
+.chip {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  color: var(--mid-gray);
+  transition: all 0.15s;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 40px;
+}
+.chip:active { opacity: 0.7; }
+.chipActive {
+  background: rgba(232,114,42,.15);
+  color: var(--orange);
+  border-color: rgba(232,114,42,.4);
+}
+
+/* ── Toggle ──────────────────────────────────────────────────── */
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.toggleRow:not(:last-child) { border-bottom: 1px solid var(--border); }
+.toggleText { flex: 1; }
+.toggleLabel { font-size: 13px; color: var(--white); }
+.toggleSub   { font-size: 11px; color: var(--mid-gray); margin-top: 2px; }
+.toggle {
+  width: 44px; height: 26px;
+  background: var(--border);
+  border-radius: 13px;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+.toggleOn { background: var(--orange); }
+.toggleThumb {
+  position: absolute;
+  top: 3px; left: 3px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.toggleOn .toggleThumb { transform: translateX(18px); }
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+.field { margin-bottom: 12px; }
+.select, .input {
+  width: 100%;
+  background: var(--charcoal-lt);
+  border: 1px solid var(--border);
+  color: var(--off-white);
+  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 48px;
+}
+.select:focus, .input:focus { outline: none; border-color: var(--orange); }
+.inputWrap { position: relative; }
+.inputSuffix {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: var(--mid-gray);
+  pointer-events: none;
+}
+
+/* ── Section header ──────────────────────────────────────────── */
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+.sectionTitle { font-size: 16px; font-weight: 700; color: var(--white); }
+.sectionSub   { font-size: 12px; color: var(--mid-gray); margin-top: 3px; }
+
+/* ── Button ──────────────────────────────────────────────────── */
+.btn {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  min-height: 50px;
+  transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active { transform: scale(0.98); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn_primary  { background: var(--orange); color: var(--white); }
+.btn_primary:hover { background: var(--orange-lt); }
+.btn_secondary { background: var(--charcoal-lt); color: var(--light-gray); border: 1px solid var(--border); }
+.btn_ghost { background: none; color: var(--orange); border: 1px solid rgba(232,114,42,.4); }
+.btnFull { width: 100%; }
+
+/* ── Divider ─────────────────────────────────────────────────── */
+.divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+/* ── Variance ────────────────────────────────────────────────── */
+.variance { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 10px; }
+.varOver  { background: var(--red-bg);   color: var(--red);   border: 1px solid rgba(224,82,82,.3); }
+.varUnder { background: var(--green-bg); color: var(--green); border: 1px solid rgba(76,175,125,.3); }
+.varMatch { background: rgba(136,136,136,.1); color: var(--mid-gray); border: 1px solid rgba(136,136,136,.2); }

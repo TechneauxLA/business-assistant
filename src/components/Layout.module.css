@@ -1,0 +1,121 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.header {
+  background: var(--charcoal);
+  border-bottom: 3px solid var(--orange);
+  padding: 0 16px;
+  padding-top: var(--safe-top);
+  height: calc(56px + var(--safe-top));
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.tagline {
+  font-size: 8px;
+  color: var(--mid-gray);
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+}
+
+/* ── Main content ────────────────────────────────────────────── */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  /* Pad bottom so content isn't hidden behind bottom nav */
+  padding-bottom: calc(72px + var(--safe-bottom));
+}
+
+/* ── Bottom nav ──────────────────────────────────────────────── */
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--charcoal);
+  border-top: 1px solid var(--border);
+  display: flex;
+  padding-bottom: var(--safe-bottom);
+  z-index: 100;
+}
+
+.navItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--mid-gray);
+  transition: color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 56px;
+}
+
+.navItem:active { opacity: 0.7; }
+
+.navActive {
+  color: var(--orange);
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLabel {
+  font-size: 11px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+/* ── Desktop adjustments ─────────────────────────────────────── */
+@media (min-width: 768px) {
+  .header { padding: 0 24px; }
+  .main   { padding-bottom: 24px; }
+  .bottomNav {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    height: 100vh;
+    width: 220px;
+    flex-direction: column;
+    border-top: none;
+    border-right: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  /* On desktop, app becomes row layout */
+  .app { flex-direction: row; }
+  .main { flex: 1; }
+  .navItem { flex-direction: row; justify-content: flex-start; padding: 12px 20px; gap: 12px; flex: none; width: 100%; }
+  .navLabel { font-size: 13px; }
+}

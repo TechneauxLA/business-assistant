@@ -1,0 +1,41 @@
+.page { background: var(--bg); min-height: 100dvh; }
+.inner { padding: 16px; max-width: 600px; margin: 0 auto; }
+.actions { display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
+.primaryAction {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--orange); border: none; border-radius: var(--radius-lg);
+  padding: 18px 20px; cursor: pointer; width: 100%; text-align: left;
+  -webkit-tap-highlight-color: transparent; transition: background 0.15s; min-height: 72px;
+}
+.primaryAction:hover { background: var(--orange-lt); }
+.primaryAction:active { transform: scale(0.98); }
+.secondaryAction {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--charcoal-md); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 18px 20px; cursor: pointer;
+  width: 100%; text-align: left; -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s; min-height: 72px;
+}
+.secondaryAction:hover { border-color: rgba(232,114,42,.4); }
+.actionIcon { font-size: 24px; flex-shrink: 0; }
+.actionTitle { font-size: 15px; font-weight: 700; color: var(--white); }
+.actionSub { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+.secondaryAction .actionSub { color: var(--mid-gray); }
+.statsRow { display: flex; justify-content: space-around; }
+.stat { text-align: center; }
+.statValue { font-size: 20px; font-weight: 700; color: var(--orange); }
+.statLabel { font-size: 11px; color: var(--mid-gray); margin-top: 2px; }
+.exampleCard { display: block; background: var(--charcoal-lt); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; cursor: pointer; width: 100%; text-align: left; transition: border-color 0.15s; -webkit-tap-highlight-color: transparent; }
+.exampleCard:hover { border-color: rgba(232,114,42,.4); }
+.exampleName { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.exampleType { font-size: 11px; color: var(--mid-gray); margin-bottom: 8px; }
+.exampleMeta { display: flex; gap: 8px; font-size: 12px; color: var(--light-gray); flex-wrap: wrap; }
+.exampleArrow { font-size: 12px; color: var(--orange); margin-top: 8px; }
+.typeBlock { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.typeBlock:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.typeName { font-size: 12px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+.phaseRow { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.phaseLabel { font-size: 11px; color: var(--mid-gray); width: 160px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.phaseBar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.phaseBarFill { height: 100%; background: var(--orange); border-radius: 3px; }
+.phasePct { font-size: 11px; color: var(--mid-gray); width: 36px; text-align: right; flex-shrink: 0; }

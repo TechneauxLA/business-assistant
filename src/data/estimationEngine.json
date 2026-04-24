@@ -1,0 +1,1815 @@
+{
+  "canon_phases": [
+    "Discovery & Requirements",
+    "Analysis & Design",
+    "Implementation",
+    "Testing & UAT",
+    "Deployment & Post-Cutover",
+    "Project Management",
+    "Travel",
+    "Misc"
+  ],
+  "canon_subphases": [
+    "Tags / Points",
+    "Screens",
+    "Alarms",
+    "Scripting & Custom Code",
+    "Devices & Polling",
+    "Facilities",
+    "FMS",
+    "MSS / Scheduling",
+    "Navigation / UI Structure",
+    "Testing & UAT",
+    "Deployment & Post-Cutover",
+    "Discovery & Requirements",
+    "Analysis & Design",
+    "Implementation",
+    "Project Management",
+    "Travel",
+    "Misc"
+  ],
+  "roles": [
+    "Architect",
+    "Expert",
+    "Integrator",
+    "Specialist",
+    "Project Manager"
+  ],
+  "rates": {
+    "Architect": 175,
+    "Expert": 155,
+    "Integrator": 135,
+    "Specialist": 145,
+    "Project Manager": 155
+  },
+  "benchmarks": {
+    "Greenfield / Other": {
+      "total_hrs": 19677.8,
+      "phases": {
+        "Discovery & Requirements": {
+          "total_hrs": 37.5,
+          "pct_of_project": 0.2,
+          "subphases": {
+            "Initial Staging Work": {
+              "total_hrs": 25.5,
+              "role_hrs": {
+                "Architect": 25.5
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            },
+            "Project Management": {
+              "total_hrs": 2.0,
+              "role_hrs": {
+                "Architect": 2.0
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            },
+            "Documenting Processes and Procedures": {
+              "total_hrs": 2.5,
+              "role_hrs": {
+                "Integrator": 2.5
+              },
+              "role_pct": {
+                "Integrator": 100.0
+              }
+            },
+            "Discovery & Requirements": {
+              "total_hrs": 7.5,
+              "role_hrs": {
+                "Architect": 3.0,
+                "Integrator": 4.5
+              },
+              "role_pct": {
+                "Architect": 40.0,
+                "Integrator": 60.0
+              }
+            }
+          }
+        },
+        "Analysis & Design": {
+          "total_hrs": 308.5,
+          "pct_of_project": 1.6,
+          "subphases": {
+            "Analysis & Design": {
+              "total_hrs": 308.5,
+              "role_hrs": {
+                "Architect": 207.0,
+                "Integrator": 101.5
+              },
+              "role_pct": {
+                "Architect": 67.1,
+                "Integrator": 32.9
+              }
+            }
+          }
+        },
+        "Implementation": {
+          "total_hrs": 1215.5,
+          "pct_of_project": 6.2,
+          "subphases": {
+            "PNT & VHS Cleanup": {
+              "total_hrs": 72.5,
+              "role_hrs": {
+                "Architect": 6.0,
+                "Expert": 4.0,
+                "Specialist": 62.5
+              },
+              "role_pct": {
+                "Architect": 8.3,
+                "Expert": 5.5,
+                "Specialist": 86.2
+              }
+            },
+            "Implementation": {
+              "total_hrs": 822.5,
+              "role_hrs": {
+                "Architect": 348.0,
+                "Expert": 14.5,
+                "Integrator": 460.0
+              },
+              "role_pct": {
+                "Architect": 42.3,
+                "Expert": 1.8,
+                "Integrator": 55.9
+              }
+            },
+            "Tags / Points": {
+              "total_hrs": 320.5,
+              "role_hrs": {
+                "Architect": 215.5,
+                "Integrator": 105.0
+              },
+              "role_pct": {
+                "Architect": 67.2,
+                "Integrator": 32.8
+              }
+            }
+          }
+        },
+        "Testing & UAT": {
+          "total_hrs": 14.0,
+          "pct_of_project": 0.1,
+          "subphases": {
+            "Testing": {
+              "total_hrs": 14.0,
+              "role_hrs": {
+                "Architect": 12.5,
+                "Expert": 1.5
+              },
+              "role_pct": {
+                "Architect": 89.3,
+                "Expert": 10.7
+              }
+            }
+          }
+        },
+        "Deployment & Post-Cutover": {
+          "total_hrs": 313.5,
+          "pct_of_project": 1.6,
+          "subphases": {
+            "PNT & VHS Cleanup": {
+              "total_hrs": 10.0,
+              "role_hrs": {
+                "Architect": 5.0,
+                "Specialist": 5.0
+              },
+              "role_pct": {
+                "Architect": 50.0,
+                "Specialist": 50.0
+              }
+            },
+            "Post-Standardization": {
+              "total_hrs": 192.5,
+              "role_hrs": {
+                "Architect": 192.5
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            },
+            "Screens": {
+              "total_hrs": 7.0,
+              "role_hrs": {
+                "Expert": 1.0,
+                "Integrator": 6.0
+              },
+              "role_pct": {
+                "Expert": 14.3,
+                "Integrator": 85.7
+              }
+            },
+            "Deployment & Post-Cutover": {
+              "total_hrs": 104.0,
+              "role_hrs": {
+                "Architect": 32.5,
+                "Integrator": 71.5
+              },
+              "role_pct": {
+                "Architect": 31.2,
+                "Integrator": 68.8
+              }
+            }
+          }
+        },
+        "Project Management": {
+          "total_hrs": 54.5,
+          "pct_of_project": 0.3,
+          "subphases": {
+            "Project Management Tasks": {
+              "total_hrs": 1.0,
+              "role_hrs": {
+                "Architect": 1.0
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            },
+            "Project Management": {
+              "total_hrs": 53.5,
+              "role_hrs": {
+                "Architect": 49.5,
+                "Expert": 4.0
+              },
+              "role_pct": {
+                "Architect": 92.5,
+                "Expert": 7.5
+              }
+            }
+          }
+        },
+        "Misc": {
+          "total_hrs": 421.0,
+          "pct_of_project": 2.1,
+          "subphases": {
+            "Misc": {
+              "total_hrs": 421.0,
+              "role_hrs": {
+                "Architect": 421.0
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "Reimplementation / Standardization": {
+      "total_hrs": 9968.8,
+      "phases": {
+        "Discovery & Requirements": {
+          "total_hrs": 444.5,
+          "pct_of_project": 4.5,
+          "subphases": {
+            "Discovery & Requirements": {
+              "total_hrs": 410.5,
+              "role_hrs": {
+                "Architect": 87.0,
+                "Expert": 89.5,
+                "Integrator": 130.0,
+                "Specialist": 104.0
+              },
+              "role_pct": {
+                "Architect": 21.2,
+                "Expert": 21.8,
+                "Integrator": 31.7,
+                "Specialist": 25.3
+              }
+            },
+            "Project Management": {
+              "total_hrs": 34.0,
+              "role_hrs": {
+                "Architect": 19.5,
+                "Expert": 13.5,
+                "Integrator": 1.0
+              },
+              "role_pct": {
+                "Architect": 57.4,
+                "Expert": 39.7,
+                "Integrator": 2.9
+              }
+            }
+          }
+        },
+        "Analysis & Design": {
+          "total_hrs": 2263.0,
+          "pct_of_project": 22.7,
+          "subphases": {
+            "Analysis & Design": {
+              "total_hrs": 65.0,
+              "role_hrs": {
+                "Architect": 6.0,
+                "Expert": 0.5,
+                "Integrator": 58.5
+              },
+              "role_pct": {
+                "Architect": 9.2,
+                "Expert": 0.8,
+                "Integrator": 90.0
+              }
+            },
+            "Implementation": {
+              "total_hrs": 125.5,
+              "role_hrs": {
+                "Architect": 8.0,
+                "Expert": 14.0,
+                "Integrator": 103.5
+              },
+              "role_pct": {
+                "Architect": 6.4,
+                "Expert": 11.2,
+                "Integrator": 82.5
+              }
+            },
+            "Testing": {
+              "total_hrs": 3.0,
+              "role_hrs": {
+                "Architect": 3.0
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            },
+            "Detailed Analysis/Design - BKVOPS": {
+              "total_hrs": 529.5,
+              "role_hrs": {
+                "Architect": 59.5,
+                "Expert": 98.0,
+                "Integrator": 219.0,
+                "Specialist": 153.0
+              },
+              "role_pct": {
+                "Architect": 11.2,
+                "Expert": 18.5,
+                "Integrator": 41.4,
+                "Specialist": 28.9
+              }
+            },
+            "Project Management": {
+              "total_hrs": 249.0,
+              "role_hrs": {
+                "Architect": 50.0,
+                "Expert": 113.0,
+                "Integrator": 75.0,
+                "Specialist": 11.0
+              },
+              "role_pct": {
+                "Architect": 20.1,
+                "Expert": 45.4,
+                "Integrator": 30.1,
+                "Specialist": 4.4
+              }
+            },
+            "Detailed Analysis/Design - BRDGPORT": {
+              "total_hrs": 1094.0,
+              "role_hrs": {
+                "Architect": 132.5,
+                "Expert": 445.0,
+                "Integrator": 473.5,
+                "Specialist": 43.0
+              },
+              "role_pct": {
+                "Architect": 12.1,
+                "Expert": 40.7,
+                "Integrator": 43.3,
+                "Specialist": 3.9
+              }
+            },
+            "Screens": {
+              "total_hrs": 197.0,
+              "role_hrs": {
+                "Architect": 16.0,
+                "Expert": 3.0,
+                "Integrator": 178.0
+              },
+              "role_pct": {
+                "Architect": 8.1,
+                "Expert": 1.5,
+                "Integrator": 90.4
+              }
+            }
+          }
+        },
+        "Implementation": {
+          "total_hrs": 4229.2,
+          "pct_of_project": 42.4,
+          "subphases": {
+            "Implementation": {
+              "total_hrs": 2603.5,
+              "role_hrs": {
+                "Architect": 711.0,
+                "Expert": 399.0,
+                "Integrator": 758.0,
+                "Specialist": 735.5
+              },
+              "role_pct": {
+                "Architect": 27.3,
+                "Expert": 15.3,
+                "Integrator": 29.1,
+                "Specialist": 28.3
+              }
+            },
+            "Project Management": {
+              "total_hrs": 429.2,
+              "role_hrs": {
+                "Architect": 179.2,
+                "Expert": 56.5,
+                "Integrator": 107.0,
+                "Specialist": 86.5
+              },
+              "role_pct": {
+                "Architect": 41.7,
+                "Expert": 13.2,
+                "Integrator": 24.9,
+                "Specialist": 20.2
+              }
+            },
+            "Tags / Points": {
+              "total_hrs": 592.5,
+              "role_hrs": {
+                "Architect": 437.5,
+                "Specialist": 155.0
+              },
+              "role_pct": {
+                "Architect": 73.8,
+                "Specialist": 26.2
+              }
+            },
+            "Screens": {
+              "total_hrs": 604.0,
+              "role_hrs": {
+                "Architect": 28.0,
+                "Expert": 151.0,
+                "Integrator": 295.0,
+                "Specialist": 130.0
+              },
+              "role_pct": {
+                "Architect": 4.6,
+                "Expert": 25.0,
+                "Integrator": 48.8,
+                "Specialist": 21.5
+              }
+            }
+          }
+        },
+        "Testing & UAT": {
+          "total_hrs": 2109.5,
+          "pct_of_project": 21.2,
+          "subphases": {
+            "Testing & UAT - BKVOPS": {
+              "total_hrs": 647.0,
+              "role_hrs": {
+                "Architect": 136.0,
+                "Expert": 139.5,
+                "Integrator": 271.5,
+                "Specialist": 100.0
+              },
+              "role_pct": {
+                "Architect": 21.0,
+                "Expert": 21.6,
+                "Integrator": 42.0,
+                "Specialist": 15.5
+              }
+            },
+            "Testing & UAT - BRDGPORT": {
+              "total_hrs": 1254.0,
+              "role_hrs": {
+                "Architect": 691.5,
+                "Expert": 144.0,
+                "Integrator": 238.0,
+                "Specialist": 180.5
+              },
+              "role_pct": {
+                "Architect": 55.1,
+                "Expert": 11.5,
+                "Integrator": 19.0,
+                "Specialist": 14.4
+              }
+            },
+            "Project Management": {
+              "total_hrs": 208.5,
+              "role_hrs": {
+                "Architect": 92.0,
+                "Expert": 31.0,
+                "Integrator": 40.5,
+                "Specialist": 45.0
+              },
+              "role_pct": {
+                "Architect": 44.1,
+                "Expert": 14.9,
+                "Integrator": 19.4,
+                "Specialist": 21.6
+              }
+            }
+          }
+        },
+        "Deployment & Post-Cutover": {
+          "total_hrs": 803.0,
+          "pct_of_project": 8.1,
+          "subphases": {
+            "Deployment & Post-Cutover": {
+              "total_hrs": 772.0,
+              "role_hrs": {
+                "Architect": 239.5,
+                "Expert": 143.0,
+                "Integrator": 216.5,
+                "Specialist": 173.0
+              },
+              "role_pct": {
+                "Architect": 31.0,
+                "Expert": 18.5,
+                "Integrator": 28.0,
+                "Specialist": 22.4
+              }
+            },
+            "Project Management": {
+              "total_hrs": 27.0,
+              "role_hrs": {
+                "Architect": 4.5,
+                "Expert": 6.0,
+                "Integrator": 6.0,
+                "Specialist": 10.5
+              },
+              "role_pct": {
+                "Architect": 16.7,
+                "Expert": 22.2,
+                "Integrator": 22.2,
+                "Specialist": 38.9
+              }
+            },
+            "Point/FAC Cleanup - BRDGPORT": {
+              "total_hrs": 4.0,
+              "role_hrs": {
+                "Integrator": 4.0
+              },
+              "role_pct": {
+                "Integrator": 100.0
+              }
+            }
+          }
+        },
+        "Project Management": {
+          "total_hrs": 21.5,
+          "pct_of_project": 0.2,
+          "subphases": {
+            "Project Management": {
+              "total_hrs": 21.5,
+              "role_hrs": {
+                "Architect": 13.0,
+                "Expert": 6.5,
+                "Project Manager": 2.0
+              },
+              "role_pct": {
+                "Architect": 60.5,
+                "Expert": 30.2,
+                "Project Manager": 9.3
+              }
+            }
+          }
+        },
+        "Travel": {
+          "total_hrs": 98.0,
+          "pct_of_project": 1.0,
+          "subphases": {
+            "Travel": {
+              "total_hrs": 98.0,
+              "role_hrs": {
+                "Architect": 28.0,
+                "Expert": 38.0,
+                "Integrator": 12.0,
+                "Specialist": 20.0
+              },
+              "role_pct": {
+                "Architect": 28.6,
+                "Expert": 38.8,
+                "Integrator": 12.2,
+                "Specialist": 20.4
+              }
+            }
+          }
+        }
+      }
+    },
+    "Migration": {
+      "total_hrs": 26599.0,
+      "phases": {
+        "Discovery & Requirements": {
+          "total_hrs": 339.5,
+          "pct_of_project": 1.3,
+          "subphases": {
+            "Discovery & Requirements": {
+              "total_hrs": 253.5,
+              "role_hrs": {
+                "Architect": 93.0,
+                "Expert": 108.5,
+                "Integrator": 50.5,
+                "Specialist": 1.5
+              },
+              "role_pct": {
+                "Architect": 36.7,
+                "Expert": 42.8,
+                "Integrator": 19.9,
+                "Specialist": 0.6
+              }
+            },
+            "Analysis & Design": {
+              "total_hrs": 79.5,
+              "role_hrs": {
+                "Architect": 28.0,
+                "Expert": 51.5
+              },
+              "role_pct": {
+                "Architect": 35.2,
+                "Expert": 64.8
+              }
+            },
+            "Implementation": {
+              "total_hrs": 1.0,
+              "role_hrs": {
+                "Architect": 1.0
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            },
+            "Deployment & Post-Cutover": {
+              "total_hrs": 4.0,
+              "role_hrs": {
+                "Architect": 4.0
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            },
+            "Data Discovery, collection and cleanup": {
+              "total_hrs": 0.5,
+              "role_hrs": {
+                "Expert": 0.5
+              },
+              "role_pct": {
+                "Expert": 100.0
+              }
+            },
+            "Data Discovery, Collection and Cleanup": {
+              "total_hrs": 1.0,
+              "role_hrs": {
+                "Integrator": 1.0
+              },
+              "role_pct": {
+                "Integrator": 100.0
+              }
+            }
+          }
+        },
+        "Analysis & Design": {
+          "total_hrs": 400.5,
+          "pct_of_project": 1.5,
+          "subphases": {
+            "Design": {
+              "total_hrs": 361.0,
+              "role_hrs": {
+                "Architect": 107.5,
+                "Expert": 138.5,
+                "Integrator": 115.0
+              },
+              "role_pct": {
+                "Architect": 29.8,
+                "Expert": 38.4,
+                "Integrator": 31.9
+              }
+            },
+            "Analysis & Design": {
+              "total_hrs": 39.5,
+              "role_hrs": {
+                "Expert": 15.0,
+                "Integrator": 24.5
+              },
+              "role_pct": {
+                "Expert": 38.0,
+                "Integrator": 62.0
+              }
+            }
+          }
+        },
+        "Implementation": {
+          "total_hrs": 14281.2,
+          "pct_of_project": 53.7,
+          "subphases": {
+            "Implementation": {
+              "total_hrs": 1168.5,
+              "role_hrs": {
+                "Architect": 279.5,
+                "Expert": 513.0,
+                "Integrator": 376.0
+              },
+              "role_pct": {
+                "Architect": 23.9,
+                "Expert": 43.9,
+                "Integrator": 32.2
+              }
+            },
+            "Analysis & Data Discovery": {
+              "total_hrs": 239.5,
+              "role_hrs": {
+                "Architect": 66.0,
+                "Expert": 89.5,
+                "Integrator": 84.0
+              },
+              "role_pct": {
+                "Architect": 27.6,
+                "Expert": 37.4,
+                "Integrator": 35.1
+              }
+            },
+            "Ignition Solution Implementation": {
+              "total_hrs": 1012.2,
+              "role_hrs": {
+                "Architect": 262.5,
+                "Expert": 405.0,
+                "Integrator": 344.7
+              },
+              "role_pct": {
+                "Architect": 25.9,
+                "Expert": 40.0,
+                "Integrator": 34.1
+              }
+            },
+            "Andrews Route Integration -Ignition": {
+              "total_hrs": 667.5,
+              "role_hrs": {
+                "Architect": 175.0,
+                "Expert": 365.5,
+                "Integrator": 127.0
+              },
+              "role_pct": {
+                "Architect": 26.2,
+                "Expert": 54.8,
+                "Integrator": 19.0
+              }
+            },
+            "Ignition Testing": {
+              "total_hrs": 27.0,
+              "role_hrs": {
+                "Architect": 10.5,
+                "Integrator": 16.5
+              },
+              "role_pct": {
+                "Architect": 38.9,
+                "Integrator": 61.1
+              }
+            },
+            "Deployment & Post-Cutover": {
+              "total_hrs": 222.5,
+              "role_hrs": {
+                "Architect": 76.0,
+                "Expert": 146.5
+              },
+              "role_pct": {
+                "Architect": 34.2,
+                "Expert": 65.8
+              }
+            },
+            "Solution Implementation": {
+              "total_hrs": 442.5,
+              "role_hrs": {
+                "Expert": 231.0,
+                "Integrator": 211.5
+              },
+              "role_pct": {
+                "Expert": 52.2,
+                "Integrator": 47.8
+              }
+            },
+            "Solution Implementations": {
+              "total_hrs": 33.0,
+              "role_hrs": {
+                "Expert": 8.5,
+                "Integrator": 24.5
+              },
+              "role_pct": {
+                "Expert": 25.8,
+                "Integrator": 74.2
+              }
+            },
+            "Cleanup (Apache & Exxon Acquisition)": {
+              "total_hrs": 1.0,
+              "role_hrs": {
+                "Integrator": 1.0
+              },
+              "role_pct": {
+                "Integrator": 100.0
+              }
+            },
+            "Devices & Polling": {
+              "total_hrs": 303.0,
+              "role_hrs": {
+                "Architect": 122.5,
+                "Expert": 105.5,
+                "Integrator": 75.0
+              },
+              "role_pct": {
+                "Architect": 40.4,
+                "Expert": 34.8,
+                "Integrator": 24.8
+              }
+            },
+            "Tags / Points": {
+              "total_hrs": 3326.2,
+              "role_hrs": {
+                "Architect": 239.0,
+                "Expert": 94.0,
+                "Integrator": 2240.2,
+                "Specialist": 753.0
+              },
+              "role_pct": {
+                "Architect": 7.2,
+                "Expert": 2.8,
+                "Integrator": 67.3,
+                "Specialist": 22.6
+              }
+            },
+            "Screens": {
+              "total_hrs": 3955.8,
+              "role_hrs": {
+                "Architect": 227.0,
+                "Expert": 170.5,
+                "Integrator": 2910.2,
+                "Specialist": 648.0
+              },
+              "role_pct": {
+                "Architect": 5.7,
+                "Expert": 4.3,
+                "Integrator": 73.6,
+                "Specialist": 16.4
+              }
+            },
+            "Discovery & Requirements": {
+              "total_hrs": 91.0,
+              "role_hrs": {
+                "Architect": 17.5,
+                "Expert": 5.0,
+                "Integrator": 60.5,
+                "Specialist": 8.0
+              },
+              "role_pct": {
+                "Architect": 19.2,
+                "Expert": 5.5,
+                "Integrator": 66.5,
+                "Specialist": 8.8
+              }
+            },
+            "Alarms": {
+              "total_hrs": 952.5,
+              "role_hrs": {
+                "Architect": 17.5,
+                "Expert": 9.0,
+                "Integrator": 911.5,
+                "Specialist": 14.5
+              },
+              "role_pct": {
+                "Architect": 1.8,
+                "Expert": 0.9,
+                "Integrator": 95.7,
+                "Specialist": 1.5
+              }
+            },
+            "Scripting & Custom Code": {
+              "total_hrs": 1839.0,
+              "role_hrs": {
+                "Architect": 49.5,
+                "Expert": 38.0,
+                "Integrator": 1577.5,
+                "Specialist": 174.0
+              },
+              "role_pct": {
+                "Architect": 2.7,
+                "Expert": 2.1,
+                "Integrator": 85.8,
+                "Specialist": 9.5
+              }
+            }
+          }
+        },
+        "Testing & UAT": {
+          "total_hrs": 7597.2,
+          "pct_of_project": 28.6,
+          "subphases": {
+            "Testing": {
+              "total_hrs": 250.5,
+              "role_hrs": {
+                "Architect": 46.5,
+                "Expert": 130.0,
+                "Integrator": 74.0
+              },
+              "role_pct": {
+                "Architect": 18.6,
+                "Expert": 51.9,
+                "Integrator": 29.5
+              }
+            },
+            "Testing & UAT": {
+              "total_hrs": 6182.2,
+              "role_hrs": {
+                "Architect": 958.5,
+                "Expert": 496.5,
+                "Integrator": 4617.8,
+                "Specialist": 109.5
+              },
+              "role_pct": {
+                "Architect": 15.5,
+                "Expert": 8.0,
+                "Integrator": 74.7,
+                "Specialist": 1.8
+              }
+            },
+            "QAQC Edge Cycle 2": {
+              "total_hrs": 146.5,
+              "role_hrs": {
+                "Architect": 13.0,
+                "Expert": 70.0,
+                "Integrator": 63.5
+              },
+              "role_pct": {
+                "Architect": 8.9,
+                "Expert": 47.8,
+                "Integrator": 43.3
+              }
+            },
+            "SWD Additional Beta Testing - (Scope Addition)": {
+              "total_hrs": 772.2,
+              "role_hrs": {
+                "Architect": 9.5,
+                "Expert": 102.0,
+                "Integrator": 658.8,
+                "Specialist": 2.0
+              },
+              "role_pct": {
+                "Architect": 1.2,
+                "Expert": 13.2,
+                "Integrator": 85.3,
+                "Specialist": 0.3
+              }
+            },
+            "QAQC Edge Cycle 1": {
+              "total_hrs": 167.5,
+              "role_hrs": {
+                "Expert": 28.0,
+                "Integrator": 139.5
+              },
+              "role_pct": {
+                "Expert": 16.7,
+                "Integrator": 83.3
+              }
+            },
+            "Custom Requirements - Scope Additions": {
+              "total_hrs": 4.0,
+              "role_hrs": {
+                "Integrator": 4.0
+              },
+              "role_pct": {
+                "Integrator": 100.0
+              }
+            },
+            "Alarms": {
+              "total_hrs": 60.2,
+              "role_hrs": {
+                "Integrator": 60.2
+              },
+              "role_pct": {
+                "Integrator": 99.9
+              }
+            },
+            "Screens": {
+              "total_hrs": 14.0,
+              "role_hrs": {
+                "Integrator": 14.0
+              },
+              "role_pct": {
+                "Integrator": 100.0
+              }
+            }
+          }
+        },
+        "Deployment & Post-Cutover": {
+          "total_hrs": 1250.5,
+          "pct_of_project": 4.7,
+          "subphases": {
+            "Deployment & Post-Cutover": {
+              "total_hrs": 1250.5,
+              "role_hrs": {
+                "Architect": 89.0,
+                "Expert": 410.5,
+                "Integrator": 728.0,
+                "Specialist": 23.0
+              },
+              "role_pct": {
+                "Architect": 7.1,
+                "Expert": 32.8,
+                "Integrator": 58.2,
+                "Specialist": 1.8
+              }
+            }
+          }
+        },
+        "Project Management": {
+          "total_hrs": 79.5,
+          "pct_of_project": 0.3,
+          "subphases": {
+            "Project Management": {
+              "total_hrs": 79.5,
+              "role_hrs": {
+                "Architect": 79.5
+              },
+              "role_pct": {
+                "Architect": 100.0
+              }
+            }
+          }
+        },
+        "Travel": {
+          "total_hrs": 8.0,
+          "pct_of_project": 0.0,
+          "subphases": {
+            "Travel": {
+              "total_hrs": 8.0,
+              "role_hrs": {
+                "Expert": 8.0
+              },
+              "role_pct": {
+                "Expert": 100.0
+              }
+            }
+          }
+        },
+        "Misc": {
+          "total_hrs": 34.5,
+          "pct_of_project": 0.1,
+          "subphases": {
+            "Project Management": {
+              "total_hrs": 34.5,
+              "role_hrs": {
+                "Architect": 7.5,
+                "Expert": 13.0,
+                "Integrator": 14.0
+              },
+              "role_pct": {
+                "Architect": 21.7,
+                "Expert": 37.7,
+                "Integrator": 40.6
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "bp_benchmark": {
+    "name": "BP - HPU Standardization",
+    "project_type": "Reimplementation / Standardization",
+    "phases": {
+      "Discovery & Requirements": {
+        "estimated_hrs": 122,
+        "actual_hrs": 115,
+        "subphases": {
+          "Alarms": {
+            "est": 7,
+            "actual": 0,
+            "Integrator": 0
+          },
+          "Scripting & Custom Code": {
+            "est": 16.5,
+            "actual": 16.5,
+            "Expert": 7,
+            "Integrator": 9.5
+          },
+          "Tags / Points": {
+            "est": 4,
+            "actual": 4,
+            "Expert": 4
+          },
+          "Devices & Polling": {
+            "est": 14,
+            "actual": 14,
+            "Expert": 14
+          },
+          "Facilities": {
+            "est": 44.5,
+            "actual": 44.5,
+            "Integrator": 44.5
+          },
+          "FMS": {
+            "est": 2,
+            "actual": 2,
+            "Expert": 2
+          },
+          "MSS / Scheduling": {
+            "est": 4,
+            "actual": 4,
+            "Expert": 4
+          },
+          "Navigation / UI Structure": {
+            "est": 5,
+            "actual": 5,
+            "Expert": 4,
+            "Integrator": 1
+          },
+          "Tags / Points (Point Transl)": {
+            "est": 7,
+            "actual": 7,
+            "Architect": 1,
+            "Integrator": 6
+          },
+          "Screens": {
+            "est": 18,
+            "actual": 18,
+            "Architect": 7,
+            "Expert": 11
+          }
+        }
+      },
+      "Analysis & Design": {
+        "estimated_hrs": 475,
+        "actual_hrs": 475,
+        "subphases": {
+          "Alarms": {
+            "est": 10,
+            "actual": 10,
+            "Expert": 10
+          },
+          "Scripting & Custom Code": {
+            "est": 39,
+            "actual": 39,
+            "Expert": 13,
+            "Integrator": 25,
+            "Architect": 1
+          },
+          "Devices & Polling": {
+            "est": 52,
+            "actual": 52,
+            "Expert": 52
+          },
+          "Facilities": {
+            "est": 195.5,
+            "actual": 195.5,
+            "Expert": 29.5,
+            "Integrator": 163,
+            "Architect": 3
+          },
+          "FMS": {
+            "est": 2,
+            "actual": 2,
+            "Expert": 2
+          },
+          "MSS / Scheduling": {
+            "est": 4,
+            "actual": 4,
+            "Expert": 4
+          },
+          "Navigation / UI Structure": {
+            "est": 5,
+            "actual": 5,
+            "Expert": 5
+          },
+          "Tags / Points": {
+            "est": 126,
+            "actual": 126,
+            "Integrator": 123,
+            "Architect": 3
+          },
+          "Screens": {
+            "est": 41.5,
+            "actual": 41.5,
+            "Expert": 41.5
+          }
+        }
+      },
+      "Implementation": {
+        "estimated_hrs": 424,
+        "actual_hrs": 424,
+        "subphases": {
+          "Scripting & Custom Code": {
+            "est": 43,
+            "actual": 43,
+            "Integrator": 43
+          },
+          "Tags / Points": {
+            "est": 86,
+            "actual": 86,
+            "Expert": 1,
+            "Integrator": 82,
+            "Architect": 3
+          },
+          "Tags / Points (CVS)": {
+            "est": 7.5,
+            "actual": 7.5,
+            "Expert": 7.5
+          },
+          "Devices & Polling": {
+            "est": 66,
+            "actual": 66,
+            "Expert": 66
+          },
+          "Facilities": {
+            "est": 98,
+            "actual": 98,
+            "Expert": 21,
+            "Integrator": 77
+          },
+          "Screens": {
+            "est": 123.5,
+            "actual": 123.5,
+            "Expert": 36.5,
+            "Integrator": 85,
+            "Architect": 2
+          }
+        }
+      },
+      "Testing & UAT": {
+        "estimated_hrs": 475.5,
+        "actual_hrs": 475.5,
+        "subphases": {
+          "Testing & UAT": {
+            "est": 473.5,
+            "actual": 473.5,
+            "Expert": 190.5,
+            "Integrator": 195,
+            "Architect": 88
+          },
+          "Update Testing Checklist": {
+            "est": 2,
+            "actual": 2,
+            "Architect": 2
+          }
+        }
+      },
+      "Deployment & Post-Cutover": {
+        "estimated_hrs": 66.5,
+        "actual_hrs": 250.5,
+        "variance_note": "Significantly underestimated \u2014 post-cutover support was 3x the estimate",
+        "subphases": {
+          "Cutover": {
+            "est": 66.5,
+            "actual": 66.5,
+            "Expert": 24,
+            "Integrator": 21,
+            "Architect": 21.5
+          },
+          "Post-Cutover Support": {
+            "est": 0,
+            "actual": 184,
+            "Expert": 86.5,
+            "Integrator": 74.5,
+            "Architect": 23
+          }
+        }
+      },
+      "Project Management": {
+        "estimated_hrs": 295.5,
+        "actual_hrs": 299.5,
+        "subphases": {
+          "Project Mgmt": {
+            "est": 0,
+            "actual": 104
+          },
+          "Technical Coordination": {
+            "est": 0,
+            "actual": 50
+          },
+          "Project Meetings": {
+            "est": 295.5,
+            "actual": 141.5
+          },
+          "Project Update Plan": {
+            "est": 0,
+            "actual": 4
+          }
+        }
+      }
+    },
+    "totals": {
+      "estimated_hrs": 1959,
+      "actual_hrs": 1832.5,
+      "variance_hrs": -126.5,
+      "variance_pct": -6.5
+    },
+    "role_rates": {
+      "Architect": 175,
+      "Expert": 155,
+      "Integrator": 135,
+      "Specialist": 145,
+      "Project Manager": 155
+    }
+  },
+  "phase_pcts_by_type": {
+    "Migration": {
+      "Discovery & Requirements": 1.3,
+      "Analysis & Design": 1.5,
+      "Implementation": 53.7,
+      "Testing & UAT": 28.6,
+      "Deployment & Post-Cutover": 4.7,
+      "Project Management": 0.3,
+      "Travel": 0.0,
+      "Misc": 0.1
+    },
+    "Reimplementation / Standardization": {
+      "Discovery & Requirements": 4.5,
+      "Analysis & Design": 22.7,
+      "Implementation": 42.4,
+      "Testing & UAT": 21.2,
+      "Deployment & Post-Cutover": 8.1,
+      "Project Management": 0.2,
+      "Travel": 1.0
+    },
+    "Greenfield / Other": {
+      "Discovery & Requirements": 0.2,
+      "Analysis & Design": 1.6,
+      "Implementation": 6.2,
+      "Testing & UAT": 0.1,
+      "Deployment & Post-Cutover": 1.6,
+      "Project Management": 0.3,
+      "Misc": 2.1
+    }
+  },
+  "role_splits_by_phase": {
+    "Discovery & Requirements": {
+      "Architect": 32.0,
+      "Expert": 32.1,
+      "Integrator": 23.1,
+      "Specialist": 12.8
+    },
+    "Analysis & Design": {
+      "Architect": 19.8,
+      "Expert": 27.8,
+      "Integrator": 45.4,
+      "Specialist": 7.0
+    },
+    "Implementation": {
+      "Architect": 17.6,
+      "Expert": 14.2,
+      "Integrator": 54.2,
+      "Specialist": 14.0
+    },
+    "Testing & UAT": {
+      "Architect": 20.2,
+      "Expert": 11.8,
+      "Integrator": 63.6,
+      "Specialist": 4.5
+    },
+    "Deployment & Post-Cutover": {
+      "Architect": 23.8,
+      "Expert": 23.7,
+      "Integrator": 43.6,
+      "Specialist": 8.9
+    },
+    "Project Management": {
+      "Architect": 92.0,
+      "Expert": 6.8,
+      "Project Manager": 1.3
+    },
+    "Travel": {
+      "Architect": 26.4,
+      "Expert": 43.4,
+      "Integrator": 11.3,
+      "Specialist": 18.9
+    },
+    "Misc": {
+      "Architect": 94.1,
+      "Expert": 2.9,
+      "Integrator": 3.1
+    }
+  },
+  "example_projects": {
+    "BP_HPU_STD": {
+      "id": "BP_HPU_STD",
+      "name": "BP \u2013 HPU Standardization",
+      "project_type": "Reimplementation / Standardization",
+      "platform": "CygNet",
+      "data_source": "BP_PR.xlsx \u2014 Estimate & Actual tabs",
+      "totals": {
+        "estimated_hrs": 1959,
+        "actual_hrs": 1832.5,
+        "variance_hrs": -126.5,
+        "variance_pct": -6.5,
+        "estimated_cost": 291480,
+        "roles_actual": {
+          "Architect": 156.5,
+          "Expert": 667.5,
+          "Integrator": 1008.5
+        }
+      },
+      "pm_breakdown": {
+        "total_hrs": 299.5,
+        "subphases": {
+          "Project Mgmt": {
+            "actual_hrs": 104
+          },
+          "Technical Coordination": {
+            "actual_hrs": 50
+          },
+          "Project Meetings": {
+            "actual_hrs": 141.5
+          },
+          "Project Update Plan": {
+            "actual_hrs": 4
+          }
+        }
+      },
+      "phases": [
+        {
+          "phase": "Discovery & Requirements",
+          "weeks": 8,
+          "resources": 3,
+          "estimated_hrs": 122,
+          "actual_hrs": 115,
+          "variance_hrs": -7,
+          "roles_actual": {
+            "Architect": 8,
+            "Expert": 46,
+            "Integrator": 61
+          },
+          "subphases": [
+            {
+              "name": "Alarms",
+              "est": 7,
+              "actual": 0,
+              "Architect": 0,
+              "Expert": 0,
+              "Integrator": 0,
+              "note": "Not performed \u2014 excluded from scope"
+            },
+            {
+              "name": "Scripting & Custom Code",
+              "est": 16.5,
+              "actual": 16.5,
+              "Architect": 0,
+              "Expert": 7,
+              "Integrator": 9.5
+            },
+            {
+              "name": "Tags / Points (CVS Meta)",
+              "est": 4,
+              "actual": 4,
+              "Architect": 0,
+              "Expert": 4,
+              "Integrator": 0
+            },
+            {
+              "name": "Devices & Polling",
+              "est": 14,
+              "actual": 14,
+              "Architect": 0,
+              "Expert": 14,
+              "Integrator": 0
+            },
+            {
+              "name": "Facilities",
+              "est": 44.5,
+              "actual": 44.5,
+              "Architect": 1,
+              "Expert": 6,
+              "Integrator": 47
+            },
+            {
+              "name": "FMS",
+              "est": 2,
+              "actual": 2,
+              "Architect": 0,
+              "Expert": 2,
+              "Integrator": 0
+            },
+            {
+              "name": "MSS / Scheduling",
+              "est": 4,
+              "actual": 4,
+              "Architect": 0,
+              "Expert": 4,
+              "Integrator": 0
+            },
+            {
+              "name": "Navigation / UI Structure",
+              "est": 5,
+              "actual": 5,
+              "Architect": 0,
+              "Expert": 4,
+              "Integrator": 1
+            },
+            {
+              "name": "Tags / Points",
+              "est": 7,
+              "actual": 7,
+              "Architect": 1,
+              "Expert": 0,
+              "Integrator": 6
+            },
+            {
+              "name": "Screens",
+              "est": 18,
+              "actual": 18,
+              "Architect": 7,
+              "Expert": 11,
+              "Integrator": 0
+            }
+          ]
+        },
+        {
+          "phase": "Analysis & Design",
+          "weeks": 10,
+          "resources": 3,
+          "estimated_hrs": 475,
+          "actual_hrs": 475,
+          "variance_hrs": 0,
+          "roles_actual": {
+            "Architect": 7,
+            "Expert": 157,
+            "Integrator": 311
+          },
+          "subphases": [
+            {
+              "name": "Alarms",
+              "est": 10,
+              "actual": 10,
+              "Architect": 0,
+              "Expert": 10,
+              "Integrator": 0
+            },
+            {
+              "name": "Scripting & Custom Code",
+              "est": 39,
+              "actual": 39,
+              "Architect": 1,
+              "Expert": 13,
+              "Integrator": 25
+            },
+            {
+              "name": "Devices & Polling",
+              "est": 52,
+              "actual": 52,
+              "Architect": 0,
+              "Expert": 52,
+              "Integrator": 0
+            },
+            {
+              "name": "Facilities",
+              "est": 195.5,
+              "actual": 195.5,
+              "Architect": 3,
+              "Expert": 29.5,
+              "Integrator": 163
+            },
+            {
+              "name": "FMS",
+              "est": 2,
+              "actual": 2,
+              "Architect": 0,
+              "Expert": 2,
+              "Integrator": 0
+            },
+            {
+              "name": "MSS / Scheduling",
+              "est": 4,
+              "actual": 4,
+              "Architect": 0,
+              "Expert": 4,
+              "Integrator": 0
+            },
+            {
+              "name": "Navigation / UI Structure",
+              "est": 5,
+              "actual": 5,
+              "Architect": 0,
+              "Expert": 5,
+              "Integrator": 0
+            },
+            {
+              "name": "Tags / Points",
+              "est": 126,
+              "actual": 126,
+              "Architect": 3,
+              "Expert": 0,
+              "Integrator": 123
+            },
+            {
+              "name": "Screens",
+              "est": 41.5,
+              "actual": 41.5,
+              "Architect": 0,
+              "Expert": 41.5,
+              "Integrator": 0
+            }
+          ]
+        },
+        {
+          "phase": "Implementation",
+          "weeks": 6,
+          "resources": 3,
+          "estimated_hrs": 424,
+          "actual_hrs": 424,
+          "variance_hrs": 0,
+          "roles_actual": {
+            "Architect": 5,
+            "Expert": 132,
+            "Integrator": 287
+          },
+          "subphases": [
+            {
+              "name": "Scripting & Custom Code",
+              "est": 43,
+              "actual": 43,
+              "Architect": 0,
+              "Expert": 0,
+              "Integrator": 43
+            },
+            {
+              "name": "Tags / Points (CVS Meta)",
+              "est": 7.5,
+              "actual": 7.5,
+              "Architect": 0,
+              "Expert": 7.5,
+              "Integrator": 0
+            },
+            {
+              "name": "Devices & Polling",
+              "est": 66,
+              "actual": 66,
+              "Architect": 0,
+              "Expert": 66,
+              "Integrator": 0
+            },
+            {
+              "name": "Facilities",
+              "est": 98,
+              "actual": 98,
+              "Architect": 0,
+              "Expert": 21,
+              "Integrator": 77
+            },
+            {
+              "name": "Tags / Points",
+              "est": 86,
+              "actual": 86,
+              "Architect": 3,
+              "Expert": 1,
+              "Integrator": 82
+            },
+            {
+              "name": "Screens",
+              "est": 123.5,
+              "actual": 123.5,
+              "Architect": 2,
+              "Expert": 36.5,
+              "Integrator": 85
+            }
+          ]
+        },
+        {
+          "phase": "Testing & UAT",
+          "weeks": 4,
+          "resources": 3,
+          "estimated_hrs": 475.5,
+          "actual_hrs": 475.5,
+          "variance_hrs": 0,
+          "roles_actual": {
+            "Architect": 90,
+            "Expert": 190.5,
+            "Integrator": 195
+          },
+          "subphases": [
+            {
+              "name": "UAT Testing / Server Prep",
+              "est": 473.5,
+              "actual": 473.5,
+              "Architect": 88,
+              "Expert": 190.5,
+              "Integrator": 195
+            },
+            {
+              "name": "Update Testing Checklist",
+              "est": 2,
+              "actual": 2,
+              "Architect": 2,
+              "Expert": 0,
+              "Integrator": 0
+            }
+          ]
+        },
+        {
+          "phase": "Deployment & Post-Cutover",
+          "weeks": 3,
+          "resources": 3,
+          "estimated_hrs": 66.5,
+          "actual_hrs": 250.5,
+          "variance_hrs": 184,
+          "variance_note": "Post-cutover support was not scoped \u2014 ran 3.8\u00d7 the estimate",
+          "roles_actual": {
+            "Architect": 44.5,
+            "Expert": 110.5,
+            "Integrator": 95.5
+          },
+          "subphases": [
+            {
+              "name": "Cutover",
+              "est": 66.5,
+              "actual": 66.5,
+              "Architect": 21.5,
+              "Expert": 24,
+              "Integrator": 21
+            },
+            {
+              "name": "Post-Cutover Support",
+              "est": 0,
+              "actual": 184,
+              "Architect": 23,
+              "Expert": 86.5,
+              "Integrator": 74.5,
+              "variance_note": "Unscoped \u2014 ran entirely as overrun"
+            }
+          ]
+        },
+        {
+          "phase": "Project Management",
+          "weeks": null,
+          "resources": null,
+          "estimated_hrs": 295.5,
+          "actual_hrs": 299.5,
+          "variance_hrs": 4,
+          "roles_actual": {
+            "Architect": 0,
+            "Expert": 0,
+            "Integrator": 0,
+            "Project Manager": 299.5
+          },
+          "subphases": [
+            {
+              "name": "Project Meetings",
+              "est": 295.5,
+              "actual": 141.5,
+              "Architect": 0,
+              "Expert": 0,
+              "Integrator": 0,
+              "PM": 141.5
+            },
+            {
+              "name": "Project Mgmt",
+              "est": 0,
+              "actual": 104,
+              "Architect": 0,
+              "Expert": 0,
+              "Integrator": 0,
+              "PM": 104
+            },
+            {
+              "name": "Technical Coordination",
+              "est": 0,
+              "actual": 50,
+              "Architect": 0,
+              "Expert": 0,
+              "Integrator": 0,
+              "PM": 50
+            },
+            {
+              "name": "Project Update Plan",
+              "est": 0,
+              "actual": 4,
+              "Architect": 0,
+              "Expert": 0,
+              "Integrator": 0,
+              "PM": 4
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "type": "overrun",
+          "phase": "Deployment & Post-Cutover",
+          "severity": "high",
+          "text": "Post-cutover support was not included in the original scope estimate. Actual ran 184h over \u2014 3.8\u00d7 the cutover estimate. This is the single largest variance driver."
+        },
+        {
+          "type": "accurate",
+          "phase": "Analysis & Design",
+          "text": "Analysis & Design came in exactly on estimate (475h) despite being the most complex phase. The role mix shifted \u2014 more Integrator hours, fewer Expert hours than estimated."
+        },
+        {
+          "type": "underrun",
+          "phase": "Discovery & Requirements",
+          "text": "Discovery came in 7h under (115h vs 122h). Alarms sub-phase (7h estimated) was not performed, likely excluded from final scope."
+        },
+        {
+          "type": "role_shift",
+          "phase": "Implementation",
+          "text": "Implementation was on-hours but leaned heavily Integrator (68%) \u2014 facilities and point translation work drove this. Custom Scripts and Screens were exclusively Integrator-led."
+        },
+        {
+          "type": "pattern",
+          "phase": "Testing & UAT",
+          "text": "Testing was 28% of project hours (475.5h). Architect utilization was unusually high at 19% \u2014 indicating significant architectural oversight required during UAT."
+        }
+      ]
+    }
+  }
+}

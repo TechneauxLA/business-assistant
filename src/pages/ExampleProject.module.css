@@ -1,0 +1,91 @@
+.page  { background: var(--bg); min-height: 100dvh; }
+.inner { padding: 16px; max-width: 600px; margin: 0 auto; }
+.empty { padding: 32px; text-align: center; color: var(--mid-gray); }
+
+.header { margin-bottom: 16px; }
+.back { background: none; border: none; color: var(--orange); font-size: 13px; cursor: pointer; font-family: inherit; padding: 0 0 8px; }
+.projectName { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.projectMeta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--mid-gray); flex-wrap: wrap; }
+
+.tabs { display: flex; gap: 2px; margin-bottom: 16px; border-bottom: 1px solid var(--border); }
+.tab { background: none; border: none; cursor: pointer; padding: 10px 14px; font-size: 13px; font-weight: 500; color: var(--mid-gray); border-bottom: 2px solid transparent; margin-bottom: -1px; font-family: inherit; transition: all 0.15s; min-height: 44px; flex: 1; }
+.tab:active { opacity: 0.7; }
+.tabActive { color: var(--orange); border-bottom-color: var(--orange); }
+
+.metricsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.metricCard { background: var(--charcoal-lt); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; border-top: 3px solid var(--orange); }
+.metricLabel { font-size: 11px; color: var(--mid-gray); margin-bottom: 4px; }
+.metricValue { font-size: 24px; font-weight: 700; color: var(--white); line-height: 1; }
+.metricSub   { font-size: 11px; margin-top: 4px; color: var(--mid-gray); }
+
+/* Waterfall */
+.wfRow { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.wfLabel { font-size: 11px; color: var(--light-gray); width: 140px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wfBars { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.wfEst { height: 6px; border-radius: 2px; background: rgba(232,114,42,.35); min-width: 2px; }
+.wfAct { height: 6px; border-radius: 2px; background: var(--orange); min-width: 2px; }
+.wfOver { background: var(--red); }
+.wfVals { font-size: 10px; color: var(--mid-gray); width: 70px; text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+.wfLegend { display: flex; gap: 14px; margin-top: 10px; }
+.wfLegendEst  { font-size: 10px; color: rgba(232,114,42,.6); }
+.wfLegendAct  { font-size: 10px; color: var(--orange); }
+.wfLegendOver { font-size: 10px; color: var(--red); }
+
+/* Role legend */
+.roleLegend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.roleLegendItem { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--mid-gray); }
+.roleDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* Phase blocks */
+.phaseBlock { background: var(--charcoal-md); border: 1px solid var(--border); border-radius: var(--radius-lg); margin-bottom: 10px; overflow: hidden; }
+.phaseHeader { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; background: none; border: none; cursor: pointer; width: 100%; -webkit-tap-highlight-color: transparent; min-height: 56px; }
+.phaseHeader:active { background: rgba(255,255,255,.02); }
+.phaseHeaderLeft { display: flex; align-items: center; gap: 10px; }
+.phaseNum { width: 22px; height: 22px; border-radius: 4px; background: var(--orange); color: var(--white); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.phaseTitle { font-size: 13px; font-weight: 600; color: var(--white); text-align: left; }
+.phaseHeaderRight { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.phaseHrs { font-size: 13px; font-weight: 700; color: var(--white); }
+.chevron { font-size: 10px; color: var(--mid-gray); }
+.phaseBody { padding: 0 16px 16px; border-top: 1px solid var(--border); }
+.phaseRoles { padding: 10px 0 6px; }
+.phaseWarning { background: var(--amber-bg); border: 1px solid rgba(245,166,35,.3); color: var(--amber); font-size: 11px; padding: 8px 12px; border-radius: var(--radius); margin-top: 8px; }
+
+/* Sub table */
+.subTable { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 8px; }
+.subTable th { text-align: left; padding: 6px 8px; font-size: 10px; font-weight: 600; color: var(--mid-gray); border-bottom: 1px solid var(--border); text-transform: uppercase; letter-spacing: 0.4px; }
+.subTable th:not(:first-child) { text-align: right; }
+.subTable td { padding: 7px 8px; border-bottom: 1px solid rgba(58,58,58,.4); color: var(--light-gray); }
+.subTable tr:last-child td { border-bottom: none; }
+.subTable td:not(:first-child) { text-align: right; }
+.actualCell { color: var(--white); font-weight: 600; }
+.varNote { font-size: 10px; color: var(--amber); font-style: italic; }
+
+/* Role rows */
+.roleRow { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.roleRow:last-child { border-bottom: none; }
+.roleDotLg { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.roleInfo { flex: 1; }
+.roleName { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+.roleBar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.roleBarFill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+.roleStats { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex-shrink: 0; }
+.roleHrs { font-size: 13px; font-weight: 700; color: var(--white); }
+.rolePct { font-size: 11px; color: var(--mid-gray); }
+.roleCost { font-size: 11px; color: var(--green); }
+
+/* Heatmap */
+.heatRow { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.heatLabel { font-size: 11px; color: var(--light-gray); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.heatCells { display: flex; gap: 4px; flex-shrink: 0; }
+.heatCell { width: 64px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: var(--white); border: 1px solid var(--border); }
+.heatHeaders { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.heatHeaderSpacer { flex: 1; }
+.heatHeaderCell { width: 64px; text-align: center; font-size: 10px; font-weight: 600; }
+
+/* Insights */
+.insightCard { display: flex; gap: 12px; background: var(--charcoal-lt); border-left: 3px solid var(--orange); border-radius: var(--radius); padding: 14px; margin-bottom: 10px; }
+.insightIcon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.insightPhase { font-size: 10px; font-weight: 600; color: var(--mid-gray); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
+.insightText { font-size: 13px; color: var(--light-gray); line-height: 1.5; }
+.takeaway { font-size: 13px; color: var(--light-gray); line-height: 1.7; }
+.takeaway strong { color: var(--white); }

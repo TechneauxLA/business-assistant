@@ -1,0 +1,147 @@
+.page  { background: var(--bg); min-height: 100dvh; }
+.inner { padding: 16px; max-width: 600px; margin: 0 auto; }
+
+/* Step bar */
+.stepBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 14px 16px 0;
+  background: var(--charcoal-md);
+  border-bottom: 1px solid var(--border);
+}
+.stepDot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  position: relative;
+}
+.stepDot:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: calc(50% + 12px);
+  right: calc(-50% + 12px);
+  height: 2px;
+  background: var(--border);
+}
+.stepDotActive:not(:last-child)::after { background: var(--orange); }
+.stepCircle {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--mid-gray);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+  z-index: 1;
+}
+.stepDotActive .stepCircle { background: var(--orange); color: var(--white); }
+.stepDotLabel { font-size: 10px; color: var(--mid-gray); padding-bottom: 8px; }
+.stepDotActive .stepDotLabel { color: var(--orange); }
+
+/* Name input */
+.nameInput {
+  width: 100%;
+  background: var(--charcoal-lt);
+  border: 1px solid var(--border);
+  color: var(--off-white);
+  font-size: 16px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-family: inherit;
+  min-height: 48px;
+}
+.nameInput:focus { outline: none; border-color: var(--orange); }
+
+.hint { font-size: 11px; color: var(--mid-gray); line-height: 1.5; }
+
+/* Phase toggles */
+.phaseList { display: flex; flex-direction: column; gap: 8px; }
+.phaseToggle {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--charcoal-lt); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 12px 14px;
+  cursor: pointer; transition: all 0.15s; width: 100%;
+  -webkit-tap-highlight-color: transparent; min-height: 48px;
+}
+.phaseToggle:active { opacity: 0.7; }
+.phaseActive { border-color: rgba(232,114,42,.5); background: rgba(232,114,42,.08); }
+.phaseToggleLeft { display: flex; align-items: center; gap: 10px; }
+.phaseCheck {
+  width: 20px; height: 20px; border-radius: 5px;
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 11px; transition: all 0.15s;
+}
+.phaseCheckOn { background: var(--orange); border-color: var(--orange); color: var(--white); font-weight: 700; }
+.phaseName { font-size: 13px; color: var(--white); text-align: left; }
+.phasePct {
+  font-size: 11px; padding: 2px 8px; border-radius: 10px;
+  background: rgba(232,114,42,.15); color: var(--orange);
+  border: 1px solid rgba(232,114,42,.3); flex-shrink: 0;
+}
+
+/* Scope chips */
+.chipGrid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.scopeActions { display: flex; gap: 16px; margin-top: 8px; }
+.scopeLink {
+  background: none; border: none; color: var(--orange);
+  font-size: 12px; cursor: pointer; font-family: inherit; padding: 0;
+}
+
+/* Rates */
+.rateRow {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.rateRow:last-of-type { border-bottom: none; }
+.roleDot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.roleLabel { font-size: 13px; color: var(--light-gray); flex: 1; }
+.rateInputWrap { display: flex; align-items: center; gap: 4px; }
+.rateDollar { font-size: 13px; color: var(--mid-gray); }
+.rateInput {
+  width: 72px; background: var(--charcoal-lt); border: 1px solid var(--border);
+  color: var(--off-white); font-size: 14px; padding: 8px 10px;
+  border-radius: var(--radius); font-family: inherit; text-align: right; min-height: 40px;
+}
+.rateInput:focus { outline: none; border-color: var(--orange); }
+.rateSlash { font-size: 11px; color: var(--mid-gray); }
+
+/* Step nav */
+.stepNav { display: flex; gap: 10px; margin-top: 4px; }
+.stepNav > * { flex: 1; }
+
+/* Confidence badge */
+.confBadge {
+  font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px;
+  background: var(--green-bg); color: var(--green); border: 1px solid rgba(76,175,125,.3);
+  white-space: nowrap;
+}
+
+/* Metrics grid */
+.metricsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+
+/* Role legend */
+.roleLegend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.roleLegendItem { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--mid-gray); }
+.roleLegendDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* Table */
+.table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.table th {
+  text-align: left; padding: 8px 8px; font-size: 10px; font-weight: 600;
+  color: var(--mid-gray); border-bottom: 1px solid var(--border);
+  text-transform: uppercase; letter-spacing: 0.4px;
+}
+.table th:not(:first-child) { text-align: right; }
+.table td { padding: 9px 8px; border-bottom: 1px solid var(--border); color: var(--light-gray); }
+.table td:not(:first-child) { text-align: right; }
+.phaseRow td { color: var(--white); font-weight: 600; background: rgba(255,255,255,.02); }
+.subRow  td { color: var(--mid-gray); font-size: 11px; padding-left: 20px; }
+.subRow  td:first-child { color: var(--light-gray); }
+.totalRow td { color: var(--orange); font-weight: 700; border-top: 2px solid var(--orange); border-bottom: none; }
