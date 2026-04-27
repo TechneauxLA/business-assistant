@@ -69,6 +69,12 @@
 .actualCell { color: var(--white); font-weight: 600; }
 .varNote { font-size: 10px; color: var(--amber); font-style: italic; }
 
+/* Estimate-only detail rows */
+.estOnlyRow { opacity: 0.6; }
+.estOnlyRow:hover { opacity: 0.85; }
+.estOnlyName { font-size: 10px; color: var(--mid-gray); padding-left: 20px !important; font-style: italic; }
+.estOnlyDash { color: var(--mid-gray); font-size: 10px; }
+
 /* Role rows */
 .roleRow { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
 .roleRow:last-child { border-bottom: none; }

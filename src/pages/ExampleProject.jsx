@@ -219,15 +219,25 @@ export default function ExampleProject() {
                         </thead>
                         <tbody>
                           {(p.subphases || []).map(s => {
+                            if (s.est_only) {
+                              return (
+                                <tr key={s.name} className={styles.estOnlyRow}>
+                                  <td className={styles.estOnlyName}>↳ {s.name}</td>
+                                  <td>{s.est}h</td>
+                                  <td className={styles.estOnlyDash}>—</td>
+                                  <td className={styles.estOnlyDash}>est only</td>
+                                </tr>
+                              )
+                            }
                             return (
                               <tr key={s.name}>
                                 <td>{s.name}</td>
                                 <td>{s.est ? s.est + 'h' : '—'}</td>
-                                <td className={styles.actualCell}>{s.actual || 0}h</td>
+                                <td className={styles.actualCell}>{s.actual != null ? s.actual + 'h' : '—'}</td>
                                 <td>
                                   {s.variance_note
                                     ? <span className={styles.varNote}>Unscoped</span>
-                                    : <Variance est={s.est} actual={s.actual || 0} />
+                                    : <Variance est={s.est} actual={s.actual} />
                                   }
                                 </td>
                               </tr>

@@ -1851,17 +1851,83 @@
             {
               "name": "Cleanup / Pre-work",
               "actual": 563.5,
-              "est": null,
+              "est": 186,
               "Architect": 116,
               "Expert": 110,
               "Integrator": 337
             },
             {
+              "name": "Tag Cleanup",
+              "est": 80,
+              "est_only": true,
+              "role": "Expert"
+            },
+            {
+              "name": "Facility Cleanup",
+              "est": 60,
+              "est_only": true,
+              "role": "Expert"
+            },
+            {
+              "name": "Device Cleanup",
+              "est": 16,
+              "est_only": true,
+              "role": "Expert"
+            },
+            {
+              "name": "Server Setup",
+              "est": 30,
+              "est_only": true,
+              "role": "Expert"
+            },
+            {
               "name": "Requirements Gathering",
               "actual": 163.5,
-              "est": null,
+              "est": 104,
               "Architect": 14.5,
               "Integrator": 149
+            },
+            {
+              "name": "Screens",
+              "est": 24,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Facilities",
+              "est": 16,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Navigation",
+              "est": 16,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Point Translation",
+              "est": 16,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Custom Scripts & Reports",
+              "est": 12,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "MSS",
+              "est": 12,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "FMS",
+              "est": 8,
+              "est_only": true,
+              "role": "Architect"
             }
           ],
           "estimated_hrs": 290,
@@ -1880,11 +1946,59 @@
             {
               "name": "Analysis & Design",
               "actual": 612,
-              "est": null,
+              "est": 132,
               "Architect": 171,
               "Expert": 168,
               "Integrator": 169,
               "Specialist": 104
+            },
+            {
+              "name": "Point Translation",
+              "est": 60,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Facilities",
+              "est": 12,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Screens",
+              "est": 12,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "MSS",
+              "est": 12,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Navigation",
+              "est": 12,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Custom Scripts & Reports",
+              "est": 8,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "Devices",
+              "est": 8,
+              "est_only": true,
+              "role": "Architect"
+            },
+            {
+              "name": "FMS",
+              "est": 8,
+              "est_only": true,
+              "role": "Architect"
             }
           ],
           "estimated_hrs": 132,
@@ -1903,11 +2017,71 @@
             {
               "name": "Standardization Implementation",
               "actual": 2599.5,
-              "est": null,
+              "est": 1038,
               "Architect": 340,
               "Expert": 157,
               "Integrator": 1455,
               "Specialist": 647.5
+            },
+            {
+              "name": "Facility & UDC Translation",
+              "est": 300,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Screens",
+              "est": 150,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Technical Coordination",
+              "est": 120,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Devices",
+              "est": 180,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Administrative Tasks",
+              "est": 80,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Site Setup",
+              "est": 80,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Custom Scripts & Reports",
+              "est": 40,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "FMS",
+              "est": 40,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "MSS",
+              "est": 24,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Navigation",
+              "est": 24,
+              "est_only": true,
+              "role": "Specialist"
             }
           ],
           "estimated_hrs": 1038,
@@ -1926,11 +2100,53 @@
             {
               "name": "Standardization Testing & UAT",
               "actual": 348.5,
-              "est": null,
+              "est": 292,
               "Architect": 92,
               "Expert": 36.5,
               "Integrator": 188,
               "Specialist": 32
+            },
+            {
+              "name": "Screens",
+              "est": 80,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Scheduled Polls",
+              "est": 60,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Security Access",
+              "est": 40,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Callouts",
+              "est": 40,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "User Checklist Creation",
+              "est": 24,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "Scripts & Reports",
+              "est": 24,
+              "est_only": true,
+              "role": "Specialist"
+            },
+            {
+              "name": "UAT",
+              "est": 24,
+              "est_only": true,
+              "role": "Specialist"
             }
           ],
           "estimated_hrs": 292,
@@ -1947,7 +2163,7 @@
             {
               "name": "Deployment",
               "actual": 39.5,
-              "est": null,
+              "est": 80,
               "Architect": 3.5,
               "Integrator": 36
             }
