@@ -69,7 +69,12 @@
 .actualCell { color: var(--white); font-weight: 600; }
 .varNote { font-size: 10px; color: var(--amber); font-style: italic; }
 
-/* Estimate-only detail rows */
+/* Child rows — indented, have both est and actual */
+.childRow { background: rgba(255,255,255,0.02); }
+.childName { font-size: 11px; color: var(--light-gray); padding-left: 20px !important; }
+.childActual { color: var(--light-gray); font-weight: 500; }
+
+/* Estimate-only detail rows — no actual data */
 .estOnlyRow { opacity: 0.6; }
 .estOnlyRow:hover { opacity: 0.85; }
 .estOnlyName { font-size: 10px; color: var(--mid-gray); padding-left: 20px !important; font-style: italic; }

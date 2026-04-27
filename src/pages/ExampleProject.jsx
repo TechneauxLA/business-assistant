@@ -219,6 +219,7 @@ export default function ExampleProject() {
                         </thead>
                         <tbody>
                           {(p.subphases || []).map(s => {
+                            // Estimate-only detail row (no actual data)
                             if (s.est_only) {
                               return (
                                 <tr key={s.name} className={styles.estOnlyRow}>
@@ -229,10 +230,27 @@ export default function ExampleProject() {
                                 </tr>
                               )
                             }
+                            // Child row — indented, has both est and actual
+                            if (s.child_item) {
+                              return (
+                                <tr key={s.name} className={styles.childRow}>
+                                  <td className={styles.childName}>↳ {s.name}</td>
+                                  <td>{s.est != null ? s.est + 'h' : '—'}</td>
+                                  <td className={styles.childActual}>{s.actual != null ? s.actual + 'h' : '—'}</td>
+                                  <td>
+                                    {s.variance_note
+                                      ? <span className={styles.varNote}>Unscoped</span>
+                                      : <Variance est={s.est} actual={s.actual} />
+                                    }
+                                  </td>
+                                </tr>
+                              )
+                            }
+                            // Standard subphase row
                             return (
                               <tr key={s.name}>
                                 <td>{s.name}</td>
-                                <td>{s.est ? s.est + 'h' : '—'}</td>
+                                <td>{s.est != null ? s.est + 'h' : '—'}</td>
                                 <td className={styles.actualCell}>{s.actual != null ? s.actual + 'h' : '—'}</td>
                                 <td>
                                   {s.variance_note
