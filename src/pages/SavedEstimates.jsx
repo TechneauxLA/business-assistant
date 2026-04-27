@@ -11,25 +11,37 @@ export default function SavedEstimates() {
 
   useEffect(() => {
     async function load() {
+      let loadedFromCloud = false
+
       if (supabase) {
-        const { data, error } = await supabase
-          .from('estimates')
-          .select('*')
-          .order('created_at', { ascending: false })
-          .limit(50)
-        if (!error) setEstimates(data || [])
-      } else {
-        // Demo mode — read from localStorage
+        const { data: { session } } = await supabase.auth.getSession()
+        if (session?.user) {
+          const { data, error } = await supabase
+            .from('estimates')
+            .select('*')
+            .order('created_at', { ascending: false })
+            .limit(50)
+          if (!error) {
+            setEstimates(data || [])
+            loadedFromCloud = true
+          }
+        }
+      }
+
+      if (!loadedFromCloud) {
         const saved = JSON.parse(localStorage.getItem('estimates') || '[]')
         setEstimates(saved)
       }
+
       setLoading(false)
     }
     load()
   }, [])
 
   async function deleteEstimate(id) {
-    if (supabase) {
+    // UUID = came from Supabase; number = came from localStorage
+    const isCloudId = typeof id === 'string' && id.includes('-')
+    if (supabase && isCloudId) {
       await supabase.from('estimates').delete().eq('id', id)
     } else {
       const saved = JSON.parse(localStorage.getItem('estimates') || '[]')

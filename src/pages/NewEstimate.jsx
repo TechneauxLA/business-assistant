@@ -89,7 +89,7 @@ export default function NewEstimate() {
     return { grandHrs: Math.round(grandHrs), totalCost: Math.round(totalCost), avgRate: Math.round(avgRate), roleTotals, phaseRows }
   }, [engine, projectType, totalHours, activePhases, activeSubs, rates])
 
-  // ── Save to Supabase ──────────────────────────────────────────
+  // ── Save estimate ─────────────────────────────────────────────
   async function saveEstimate() {
     setSaving(true)
     const payload = {
@@ -101,17 +101,28 @@ export default function NewEstimate() {
       subphases:    [...activeSubs],
       rates,
       breakdown:    estimate.phaseRows,
-      created_at:   new Date().toISOString(),
     }
+
+    let savedToCloud = false
+
     if (supabase) {
-      const { error } = await supabase.from('estimates').insert(payload)
-      if (error) console.error('Save error:', error)
-    } else {
-      // Demo mode — store in localStorage
-      const saved = JSON.parse(localStorage.getItem('estimates') || '[]')
-      saved.unshift({ ...payload, id: Date.now() })
-      localStorage.setItem('estimates', JSON.stringify(saved))
+      const { data: { session } } = await supabase.auth.getSession()
+      if (session?.user) {
+        const { error } = await supabase
+          .from('estimates')
+          .insert({ ...payload, user_id: session.user.id })
+        if (!error) savedToCloud = true
+        else console.error('Supabase save error:', error)
+      }
     }
+
+    if (!savedToCloud) {
+      // No auth session or Supabase unavailable — persist locally
+      const existing = JSON.parse(localStorage.getItem('estimates') || '[]')
+      existing.unshift({ ...payload, id: Date.now(), created_at: new Date().toISOString() })
+      localStorage.setItem('estimates', JSON.stringify(existing))
+    }
+
     setSaving(false)
     navigate('/estimator/saved')
   }
