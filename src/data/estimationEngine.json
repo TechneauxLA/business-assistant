@@ -1399,7 +1399,11 @@
           "Architect": 156.5,
           "Expert": 667.5,
           "Integrator": 1008.5
-        }
+        },
+        "actual_cost": 266998,
+        "blended_rate": 145.7,
+        "team_size": 4,
+        "revenue_per_member": 66750
       },
       "pm_breakdown": {
         "total_hrs": 299.5,
@@ -1808,6 +1812,579 @@
           "type": "pattern",
           "phase": "Testing & UAT",
           "text": "Testing was 28% of project hours (475.5h). Architect utilization was unusually high at 19% \u2014 indicating significant architectural oversight required during UAT."
+        }
+      ]
+    },
+    "CONOCO_PERM_STD": {
+      "id": "CONOCO_PERM_STD",
+      "name": "Conoco Phillips Permian \u2013 Standardization",
+      "project_type": "Reimplementation / Standardization",
+      "platform": "CygNet",
+      "data_source": "Project_Actuals_V1.xlsx + Project_Est_V1.xlsx",
+      "totals": {
+        "estimated_hrs": 1832,
+        "actual_hrs": 5292.2,
+        "variance_hrs": 3460.2,
+        "variance_pct": 188.9,
+        "estimated_cost": 251480,
+        "actual_cost": 643748,
+        "roles_actual": {
+          "Architect": 737.5,
+          "Expert": 471.5,
+          "Integrator": 2334,
+          "Specialist": 872.5
+        },
+        "blended_rate": 121.64,
+        "team_size": 8,
+        "revenue_per_member": 80468
+      },
+      "phases": [
+        {
+          "phase": "Discovery & Requirements",
+          "actual_hrs": 727.0,
+          "roles_actual": {
+            "Architect": 130.5,
+            "Expert": 110,
+            "Integrator": 486
+          },
+          "subphases": [
+            {
+              "name": "Cleanup / Pre-work",
+              "actual": 563.5,
+              "est": null,
+              "Architect": 116,
+              "Expert": 110,
+              "Integrator": 337
+            },
+            {
+              "name": "Requirements Gathering",
+              "actual": 163.5,
+              "est": null,
+              "Architect": 14.5,
+              "Integrator": 149
+            }
+          ],
+          "estimated_hrs": 290,
+          "variance_hrs": 437.0
+        },
+        {
+          "phase": "Analysis & Design",
+          "actual_hrs": 612,
+          "roles_actual": {
+            "Architect": 171,
+            "Expert": 168,
+            "Integrator": 169,
+            "Specialist": 104
+          },
+          "subphases": [
+            {
+              "name": "Analysis & Design",
+              "actual": 612,
+              "est": null,
+              "Architect": 171,
+              "Expert": 168,
+              "Integrator": 169,
+              "Specialist": 104
+            }
+          ],
+          "estimated_hrs": 132,
+          "variance_hrs": 480
+        },
+        {
+          "phase": "Implementation",
+          "actual_hrs": 2599.5,
+          "roles_actual": {
+            "Architect": 340,
+            "Expert": 157,
+            "Integrator": 1455,
+            "Specialist": 647.5
+          },
+          "subphases": [
+            {
+              "name": "Standardization Implementation",
+              "actual": 2599.5,
+              "est": null,
+              "Architect": 340,
+              "Expert": 157,
+              "Integrator": 1455,
+              "Specialist": 647.5
+            }
+          ],
+          "estimated_hrs": 1038,
+          "variance_hrs": 1561.5
+        },
+        {
+          "phase": "Testing & UAT",
+          "actual_hrs": 348.5,
+          "roles_actual": {
+            "Architect": 92,
+            "Expert": 36.5,
+            "Integrator": 188,
+            "Specialist": 32
+          },
+          "subphases": [
+            {
+              "name": "Standardization Testing & UAT",
+              "actual": 348.5,
+              "est": null,
+              "Architect": 92,
+              "Expert": 36.5,
+              "Integrator": 188,
+              "Specialist": 32
+            }
+          ],
+          "estimated_hrs": 292,
+          "variance_hrs": 56.5
+        },
+        {
+          "phase": "Deployment & Post-Cutover",
+          "actual_hrs": 39.5,
+          "roles_actual": {
+            "Architect": 3.5,
+            "Integrator": 36
+          },
+          "subphases": [
+            {
+              "name": "Deployment",
+              "actual": 39.5,
+              "est": null,
+              "Architect": 3.5,
+              "Integrator": 36
+            }
+          ],
+          "estimated_hrs": 80,
+          "variance_hrs": -40.5
+        },
+        {
+          "phase": "Project Management",
+          "actual_hrs": 708.75,
+          "roles_actual": {},
+          "subphases": [
+            {
+              "name": "Project Management Tasks",
+              "actual": 453.25
+            },
+            {
+              "name": "Project Meetings",
+              "actual": 255.5
+            }
+          ]
+        },
+        {
+          "phase": "Misc",
+          "actual_hrs": 257.0,
+          "roles_actual": {
+            "Architect": 0.5,
+            "Specialist": 89
+          },
+          "subphases": [
+            {
+              "name": "PMShale Maintenance",
+              "actual": 89.5,
+              "Architect": 0.5,
+              "Specialist": 89
+            },
+            {
+              "name": "Misc Tasks / Travel",
+              "actual": 159
+            },
+            {
+              "name": "Support",
+              "actual": 8.5
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "type": "overrun",
+          "phase": "Overall",
+          "severity": "high",
+          "text": "Total actuals (5,292h) ran 2.9\u00d7 the original estimate (1,832h). This is the single most significant pattern \u2014 scope was dramatically underestimated at the outset."
+        },
+        {
+          "type": "overrun",
+          "phase": "Analysis & Design",
+          "severity": "high",
+          "text": "Analysis & Design ran 612h actual vs 132h estimated \u2014 a 4.6\u00d7 overrun. Design complexity (screens, facilities, point translation, custom scripts) was the primary driver."
+        },
+        {
+          "type": "overrun",
+          "phase": "Discovery & Requirements",
+          "severity": "medium",
+          "text": "Cleanup/Pre-work alone consumed 563.5h \u2014 3\u00d7 the entire estimated D&R phase. Tag cleanup, facility prep, and server setup were severely underscoped."
+        },
+        {
+          "type": "pattern",
+          "phase": "Implementation",
+          "text": "Implementation was Integrator-heavy (56%) and Specialist-heavy (25%) as expected for standardization work. Architect utilization dropped to 13% in implementation \u2014 consistent with the broader pattern."
+        },
+        {
+          "type": "accurate",
+          "phase": "Testing & UAT",
+          "text": "Testing & UAT was the most accurately estimated phase: 348.5h actual vs 292h estimated (1.2\u00d7 ratio). Testing scope was better-defined than earlier phases."
+        },
+        {
+          "type": "underrun",
+          "phase": "Deployment & Post-Cutover",
+          "text": "Deployment came in at 39.5h \u2014 well under the 80h estimate. Tight execution or scope reduction at cutover kept deployment lean."
+        }
+      ]
+    },
+    "CONOCO_DEL_STD": {
+      "id": "CONOCO_DEL_STD",
+      "name": "Conoco Phillips Delaware \u2013 Standardization + Merger",
+      "project_type": "Reimplementation / Standardization",
+      "platform": "CygNet",
+      "data_source": "Project_Actuals_V1.xlsx \u2014 Conoco-Del sheet",
+      "scope_note": "~300K points, 84 pts/hr, 3 sites, 792 pre-built screens, 1 standardization + 1 merger in scope",
+      "totals": {
+        "actual_hrs": 4102.8,
+        "actual_cost": 438748,
+        "invoiced_revenue": 551405.97,
+        "roles_actual": {
+          "Architect": 562.0,
+          "Expert": 104,
+          "Integrator": 2153.0,
+          "Specialist": 727.5
+        },
+        "blended_rate": 134.4,
+        "team_size": 8,
+        "revenue_per_member": 68926,
+        "integrator_rate_note": "Integrator billed at $105/hr on this contract (vs standard $135)"
+      },
+      "phases": [
+        {
+          "phase": "Discovery & Requirements",
+          "actual_hrs": 219,
+          "roles_actual": {
+            "Architect": 27.5,
+            "Expert": 33,
+            "Integrator": 97,
+            "Specialist": 61.5
+          },
+          "subphases": [
+            {
+              "name": "Requirements Gathering",
+              "actual": 219,
+              "Architect": 27.5,
+              "Expert": 33,
+              "Integrator": 97,
+              "Specialist": 61.5
+            }
+          ]
+        },
+        {
+          "phase": "Analysis & Design",
+          "actual_hrs": 697.5,
+          "roles_actual": {
+            "Architect": 89.5,
+            "Expert": 71,
+            "Integrator": 402.5,
+            "Specialist": 134.5
+          },
+          "subphases": [
+            {
+              "name": "Analysis & Design",
+              "actual": 697.5,
+              "Architect": 89.5,
+              "Expert": 71,
+              "Integrator": 402.5,
+              "Specialist": 134.5
+            }
+          ]
+        },
+        {
+          "phase": "Implementation",
+          "actual_hrs": 1412.0,
+          "roles_actual": {
+            "Architect": 205.0,
+            "Integrator": 1020,
+            "Specialist": 187
+          },
+          "subphases": [
+            {
+              "name": "Standardization Implementation",
+              "actual": 690.5,
+              "Architect": 90.5,
+              "Integrator": 484,
+              "Specialist": 116
+            },
+            {
+              "name": "Merger Implementation",
+              "actual": 721.5,
+              "Architect": 114.5,
+              "Integrator": 536,
+              "Specialist": 71
+            }
+          ]
+        },
+        {
+          "phase": "Testing & UAT",
+          "actual_hrs": 940.0,
+          "roles_actual": {
+            "Architect": 192.5,
+            "Integrator": 473,
+            "Specialist": 274.5
+          },
+          "subphases": [
+            {
+              "name": "Standardization Testing & UAT",
+              "actual": 322.5,
+              "Architect": 37.5,
+              "Integrator": 199,
+              "Specialist": 86
+            },
+            {
+              "name": "Merger Testing",
+              "actual": 617.5,
+              "Architect": 155,
+              "Integrator": 274,
+              "Specialist": 188.5
+            }
+          ]
+        },
+        {
+          "phase": "Deployment & Post-Cutover",
+          "actual_hrs": 254.5,
+          "roles_actual": {
+            "Architect": 47.5,
+            "Integrator": 160.5,
+            "Specialist": 46.5
+          },
+          "subphases": [
+            {
+              "name": "Merger Deployment",
+              "actual": 126,
+              "Architect": 24.5,
+              "Integrator": 74,
+              "Specialist": 27.5
+            },
+            {
+              "name": "Post-Cutover Support",
+              "actual": 128.5,
+              "Architect": 23,
+              "Integrator": 86.5,
+              "Specialist": 19
+            }
+          ]
+        },
+        {
+          "phase": "Project Management",
+          "actual_hrs": 496.75,
+          "roles_actual": {},
+          "subphases": [
+            {
+              "name": "Project Management",
+              "actual": 475.25
+            },
+            {
+              "name": "Project Meetings",
+              "actual": 21.5
+            }
+          ]
+        },
+        {
+          "phase": "Misc",
+          "actual_hrs": 83.0,
+          "roles_actual": {
+            "Specialist": 23.5
+          },
+          "subphases": [
+            {
+              "name": "Misc Tasks / Travel",
+              "actual": 59.5
+            },
+            {
+              "name": "Maintenance",
+              "actual": 23.5,
+              "Specialist": 23.5
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "type": "pattern",
+          "phase": "Implementation",
+          "text": "This project carried two implementation phases in parallel: Standardization (690.5h) and a Merger (721.5h). Together they represent 69% of core project hours \u2014 nearly double a typical single-scope project."
+        },
+        {
+          "type": "pattern",
+          "phase": "Testing & UAT",
+          "text": "Testing ran 940h (27% of total) driven by the dual-scope. Merger Testing alone was 617.5h and was Architect-heavy (25%) \u2014 indicating significant technical complexity in the merger validation layer."
+        },
+        {
+          "type": "role_shift",
+          "phase": "Implementation",
+          "text": "Expert utilization was 0% across all implementation and testing phases \u2014 all technical execution was split between Architect, Integrator, and Specialist. This suggests work that required either senior architects or hands-on configuration specialists with no mid-level expert involvement."
+        },
+        {
+          "type": "pattern",
+          "phase": "Deployment & Post-Cutover",
+          "text": "Post-cutover support (128.5h) nearly equaled deployment (126h). For dual-scope projects, post-cutover support should be scoped as a separate phase \u2014 not assumed to be minor."
+        },
+        {
+          "type": "accurate",
+          "phase": "Overall",
+          "text": "Invoiced revenue of $551,405.97 vs formula cost of $438,748 \u2014 representing a 25.7% premium above direct labor cost. PM overhead and project coordination account for this delta."
+        }
+      ]
+    },
+    "DGO_STD": {
+      "id": "DGO_STD",
+      "name": "DGO \u2013 Standardization",
+      "project_type": "Reimplementation / Standardization",
+      "platform": "CygNet",
+      "data_source": "Project_Actuals_V1.xlsx \u2014 DGO sheet",
+      "totals": {
+        "actual_hrs": 2241.0,
+        "actual_cost": 329505,
+        "roles_actual": {
+          "Architect": 50.0,
+          "Expert": 1136.5,
+          "Integrator": 942.5,
+          "Project Manager": 112
+        },
+        "blended_rate": 147.03,
+        "team_size": 6,
+        "revenue_per_member": 54918
+      },
+      "phases": [
+        {
+          "phase": "Discovery & Requirements",
+          "actual_hrs": 57.5,
+          "roles_actual": {
+            "Architect": 9.5,
+            "Expert": 48
+          },
+          "subphases": [
+            {
+              "name": "Information Gathering & Planning",
+              "actual": 57.5,
+              "Architect": 9.5,
+              "Expert": 48
+            }
+          ]
+        },
+        {
+          "phase": "Analysis & Design",
+          "actual_hrs": 78,
+          "roles_actual": {
+            "Architect": 11,
+            "Expert": 60.5,
+            "Integrator": 6.5
+          },
+          "subphases": [
+            {
+              "name": "Analysis & Review",
+              "actual": 78,
+              "Architect": 11,
+              "Expert": 60.5,
+              "Integrator": 6.5
+            }
+          ]
+        },
+        {
+          "phase": "Implementation",
+          "actual_hrs": 1267,
+          "roles_actual": {
+            "Architect": 1.5,
+            "Expert": 611,
+            "Integrator": 654.5
+          },
+          "subphases": [
+            {
+              "name": "Implementations",
+              "actual": 1267,
+              "Architect": 1.5,
+              "Expert": 611,
+              "Integrator": 654.5
+            }
+          ]
+        },
+        {
+          "phase": "Testing & UAT",
+          "actual_hrs": 525,
+          "roles_actual": {
+            "Expert": 281,
+            "Integrator": 244
+          },
+          "subphases": [
+            {
+              "name": "System Verification & UAT",
+              "actual": 525,
+              "Expert": 281,
+              "Integrator": 244
+            }
+          ]
+        },
+        {
+          "phase": "Deployment & Post-Cutover",
+          "actual_hrs": 36.5,
+          "roles_actual": {
+            "Expert": 36.5
+          },
+          "subphases": [
+            {
+              "name": "Deployment & Post-Cutover Support",
+              "actual": 36.5,
+              "Expert": 36.5
+            }
+          ]
+        },
+        {
+          "phase": "Project Management",
+          "actual_hrs": 277,
+          "roles_actual": {
+            "Architect": 28.0,
+            "Expert": 99.5,
+            "Integrator": 37.5,
+            "Project Manager": 112
+          },
+          "subphases": [
+            {
+              "name": "Project Management",
+              "actual": 125,
+              "Architect": 4.5,
+              "Expert": 8.5,
+              "Project Manager": 112
+            },
+            {
+              "name": "Project Meetings",
+              "actual": 152,
+              "Architect": 23.5,
+              "Expert": 91,
+              "Integrator": 37.5
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "type": "pattern",
+          "phase": "Implementation",
+          "text": "DGO was an Expert/Integrator-driven project \u2014 Architect utilization was only 2% of total hours (50h of 2,241h). This is the lowest Architect intensity in the dataset and suggests a well-defined scope executed by mid-level practitioners."
+        },
+        {
+          "type": "pattern",
+          "phase": "Implementation",
+          "text": "Implementation consumed 56.5% of total project hours (1,267h). Expert (611h) and Integrator (654.5h) split implementation nearly 50/50 \u2014 an unusually balanced split that indicates parallel workstreams."
+        },
+        {
+          "type": "pattern",
+          "phase": "Testing & UAT",
+          "text": "Testing & UAT (525h) was 23.4% of total hours \u2014 consistent with the 21\u201328% historical range for reimplementation projects. The Expert-Integrator split in testing (281h/244h) mirrors the implementation pattern."
+        },
+        {
+          "type": "accurate",
+          "phase": "Discovery & Requirements",
+          "text": "Discovery was lean at 57.5h (2.6% of project). For a standardization project with well-understood scope and existing CygNet infrastructure, this is appropriate \u2014 no Integrator discovery work was needed."
+        },
+        {
+          "type": "role_shift",
+          "phase": "Project Management",
+          "text": "No Specialist hours were logged on this project \u2014 zero. DGO's scope did not include the specialist-intensive work (tag translation, UDC management) seen in larger Conoco engagements."
         }
       ]
     }

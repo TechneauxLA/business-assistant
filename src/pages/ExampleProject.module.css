@@ -1,6 +1,7 @@
 .page  { background: var(--bg); min-height: 100dvh; }
 .inner { padding: 16px; max-width: 600px; margin: 0 auto; }
 .empty { padding: 32px; text-align: center; color: var(--mid-gray); }
+.scopeNote { font-size: 11px; color: var(--mid-gray); margin-top: 6px; font-style: italic; line-height: 1.4; }
 
 .header { margin-bottom: 16px; }
 .back { background: none; border: none; color: var(--orange); font-size: 13px; cursor: pointer; font-family: inherit; padding: 0 0 8px; }
@@ -11,6 +12,14 @@
 .tab { background: none; border: none; cursor: pointer; padding: 10px 14px; font-size: 13px; font-weight: 500; color: var(--mid-gray); border-bottom: 2px solid transparent; margin-bottom: -1px; font-family: inherit; transition: all 0.15s; min-height: 44px; flex: 1; }
 .tab:active { opacity: 0.7; }
 .tabActive { color: var(--orange); border-bottom-color: var(--orange); }
+
+/* Financial summary */
+.financialRows { display: flex; flex-direction: column; gap: 0; }
+.financialRow { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.financialRow:last-child { border-bottom: none; }
+.financialLabel { font-size: 12px; color: var(--mid-gray); }
+.financialValue { font-size: 14px; font-weight: 700; color: var(--white); }
+.rateNote { font-size: 11px; color: var(--amber); margin-top: 8px; padding: 6px 10px; background: var(--amber-bg); border-radius: var(--radius); border: 1px solid rgba(245,166,35,.25); }
 
 .metricsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
 .metricCard { background: var(--charcoal-lt); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; border-top: 3px solid var(--orange); }

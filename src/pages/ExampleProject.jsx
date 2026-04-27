@@ -1,25 +1,27 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Card, SectionHeader, Pill, RoleMixBar, ROLE_COLORS, Variance } from '../components/UI'
 import { useEngine } from '../lib/useEngine'
 import styles from './ExampleProject.module.css'
 
 export default function ExampleProject() {
   const navigate   = useNavigate()
+  const { id }     = useParams()
   const engine     = useEngine()
-  const BP         = engine.example_projects?.BP_HPU_STD
+  const proj       = engine.example_projects?.[id]
   const [tab, setTab] = useState('overview')
   const [expanded, setExpanded] = useState(new Set([0]))
 
-  if (!BP) return <div className={styles.empty}>No example project data found.</div>
+  if (!proj) return <div className={styles.empty}>No example project data found for "{id}".</div>
 
-  const tot = BP.totals
+  const tot = proj.totals
+  const hasEstimates = !!tot.estimated_hrs
 
   const tabs = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'phases',   label: 'Phases' },
-    { id: 'roles',    label: 'Roles' },
-    { id: 'insights', label: 'Insights' },
+    { id: 'overview',  label: 'Overview' },
+    { id: 'phases',    label: 'Phases' },
+    { id: 'roles',     label: 'Roles' },
+    { id: 'insights',  label: 'Insights' },
   ]
 
   return (
@@ -29,13 +31,16 @@ export default function ExampleProject() {
         {/* Header */}
         <div className={styles.header}>
           <button className={styles.back} onClick={() => navigate('/estimator')}>← Back</button>
-          <div className={styles.projectName}>{BP.name}</div>
+          <div className={styles.projectName}>{proj.name}</div>
           <div className={styles.projectMeta}>
-            <span>{BP.project_type}</span>
+            <span>{proj.project_type}</span>
             <span>·</span>
-            <span>{BP.platform}</span>
+            <span>{proj.platform}</span>
             <Pill intent="good">Completed</Pill>
           </div>
+          {proj.scope_note && (
+            <div className={styles.scopeNote}>{proj.scope_note}</div>
+          )}
         </div>
 
         {/* Tabs */}
@@ -52,53 +57,104 @@ export default function ExampleProject() {
         {/* OVERVIEW */}
         {tab === 'overview' && (
           <div>
+            {/* Metrics grid */}
             <div className={styles.metricsGrid}>
-              <div className={styles.metricCard}>
-                <div className={styles.metricLabel}>Estimated</div>
-                <div className={styles.metricValue}>{tot.estimated_hrs}h</div>
-                <div className={styles.metricSub}>Original proposal</div>
-              </div>
+              {hasEstimates && (
+                <div className={styles.metricCard}>
+                  <div className={styles.metricLabel}>Estimated</div>
+                  <div className={styles.metricValue}>{tot.estimated_hrs}h</div>
+                  <div className={styles.metricSub}>Original proposal</div>
+                </div>
+              )}
               <div className={styles.metricCard}>
                 <div className={styles.metricLabel}>Actual</div>
                 <div className={styles.metricValue}>{tot.actual_hrs}h</div>
-                <div className={styles.metricSub} style={{ color: tot.variance_hrs <= 0 ? 'var(--green)' : 'var(--red)' }}>
-                  {tot.variance_hrs > 0 ? '+' : ''}{tot.variance_hrs}h ({tot.variance_pct}%)
-                </div>
+                {hasEstimates && (
+                  <div className={styles.metricSub} style={{ color: tot.variance_hrs <= 0 ? 'var(--green)' : 'var(--red)' }}>
+                    {tot.variance_hrs > 0 ? '+' : ''}{tot.variance_hrs}h ({tot.variance_pct}%)
+                  </div>
+                )}
+              </div>
+              <div className={styles.metricCard}>
+                <div className={styles.metricLabel}>Blended Rate</div>
+                <div className={styles.metricValue}>${tot.blended_rate}/hr</div>
+                <div className={styles.metricSub}>Weighted avg billing</div>
+              </div>
+              <div className={styles.metricCard}>
+                <div className={styles.metricLabel}>Revenue / Member</div>
+                <div className={styles.metricValue}>${tot.revenue_per_member?.toLocaleString()}</div>
+                <div className={styles.metricSub}>{tot.team_size} team members</div>
               </div>
             </div>
 
+            {/* Cost summary */}
             <Card>
-              <SectionHeader title="Estimate vs actual by phase" />
-              {BP.phases.map(p => {
-                const maxH = Math.max(...BP.phases.map(x => Math.max(x.estimated_hrs, x.actual_hrs)))
-                const vr = p.actual_hrs - p.estimated_hrs
-                const isOver = vr > 20
-                return (
-                  <div key={p.phase} className={styles.wfRow}>
-                    <div className={styles.wfLabel}>{p.phase}</div>
-                    <div className={styles.wfBars}>
-                      <div className={styles.wfEst} style={{ width: `${p.estimated_hrs / maxH * 100}%` }} />
-                      <div
-                        className={`${styles.wfAct} ${isOver ? styles.wfOver : ''}`}
-                        style={{ width: `${p.actual_hrs / maxH * 100}%` }}
-                      />
-                    </div>
-                    <div className={styles.wfVals}>
-                      <span>{p.estimated_hrs}h</span>
-                      <span style={{ color: isOver ? 'var(--red)' : 'var(--green)' }}>
-                        {vr > 0 ? '+' : ''}{vr !== 0 ? vr + 'h' : '✓'}
-                      </span>
-                    </div>
+              <SectionHeader title="Financial summary" />
+              <div className={styles.financialRows}>
+                <div className={styles.financialRow}>
+                  <span className={styles.financialLabel}>Labor cost (at standard rates)</span>
+                  <span className={styles.financialValue}>${tot.actual_cost?.toLocaleString()}</span>
+                </div>
+                {tot.invoiced_revenue && (
+                  <div className={styles.financialRow}>
+                    <span className={styles.financialLabel}>Invoiced revenue</span>
+                    <span className={styles.financialValue} style={{ color: 'var(--green)' }}>
+                      ${tot.invoiced_revenue?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </span>
                   </div>
-                )
-              })}
-              <div className={styles.wfLegend}>
-                <span className={styles.wfLegendEst}>■ Estimated</span>
-                <span className={styles.wfLegendAct}>■ Actual</span>
-                <span className={styles.wfLegendOver}>■ Overrun</span>
+                )}
+                {tot.invoiced_revenue && tot.actual_cost && (
+                  <div className={styles.financialRow}>
+                    <span className={styles.financialLabel}>Margin above labor cost</span>
+                    <span className={styles.financialValue} style={{ color: 'var(--orange)' }}>
+                      +{Math.round((tot.invoiced_revenue / tot.actual_cost - 1) * 100)}%
+                    </span>
+                  </div>
+                )}
+                {tot.integrator_rate_note && (
+                  <div className={styles.rateNote}>ⓘ {tot.integrator_rate_note}</div>
+                )}
               </div>
             </Card>
 
+            {/* Est vs Actual chart — only when estimates exist */}
+            {hasEstimates && (
+              <Card>
+                <SectionHeader title="Estimate vs actual by phase" />
+                {proj.phases.map(p => {
+                  const estH = p.estimated_hrs || 0
+                  const actH = p.actual_hrs || 0
+                  const maxH = Math.max(...proj.phases.map(x => Math.max(x.estimated_hrs || 0, x.actual_hrs || 0)))
+                  const vr   = actH - estH
+                  const isOver = vr > 20
+                  return (
+                    <div key={p.phase} className={styles.wfRow}>
+                      <div className={styles.wfLabel}>{p.phase}</div>
+                      <div className={styles.wfBars}>
+                        {estH > 0 && <div className={styles.wfEst} style={{ width: `${estH / maxH * 100}%` }} />}
+                        <div
+                          className={`${styles.wfAct} ${isOver ? styles.wfOver : ''}`}
+                          style={{ width: `${actH / maxH * 100}%` }}
+                        />
+                      </div>
+                      <div className={styles.wfVals}>
+                        {estH > 0 && <span>{estH}h</span>}
+                        <span style={{ color: isOver ? 'var(--red)' : vr < -20 ? 'var(--green)' : 'var(--mid-gray)' }}>
+                          {vr > 0 ? '+' : ''}{vr !== 0 ? vr + 'h' : '✓'}
+                        </span>
+                      </div>
+                    </div>
+                  )
+                })}
+                <div className={styles.wfLegend}>
+                  <span className={styles.wfLegendEst}>■ Estimated</span>
+                  <span className={styles.wfLegendAct}>■ Actual</span>
+                  <span className={styles.wfLegendOver}>■ Overrun</span>
+                </div>
+              </Card>
+            )}
+
+            {/* Role mix */}
             <Card>
               <SectionHeader title="Overall role mix (actual)" />
               <RoleMixBar roleHours={tot.roles_actual} height={18} />
@@ -120,8 +176,8 @@ export default function ExampleProject() {
         {/* PHASES */}
         {tab === 'phases' && (
           <div>
-            {BP.phases.map((p, i) => {
-              const vr      = p.actual_hrs - p.estimated_hrs
+            {proj.phases.map((p, i) => {
+              const vr         = p.actual_hrs - (p.estimated_hrs || 0)
               const isExpanded = expanded.has(i)
               const roleTotal  = Object.values(p.roles_actual || {}).reduce((a, b) => a + b, 0)
               return (
@@ -163,11 +219,10 @@ export default function ExampleProject() {
                         </thead>
                         <tbody>
                           {(p.subphases || []).map(s => {
-                            const sv = (s.actual || 0) - (s.est || 0)
                             return (
                               <tr key={s.name}>
                                 <td>{s.name}</td>
-                                <td>{s.est || 0}h</td>
+                                <td>{s.est ? s.est + 'h' : '—'}</td>
                                 <td className={styles.actualCell}>{s.actual || 0}h</td>
                                 <td>
                                   {s.variance_note
@@ -221,7 +276,7 @@ export default function ExampleProject() {
 
             <Card>
               <SectionHeader title="Role intensity by phase" sub="Hours each role contributed per phase" />
-              {BP.phases.map(p => {
+              {proj.phases.map(p => {
                 const pr = p.roles_actual || {}
                 const pt = Object.values(pr).reduce((a, b) => a + b, 0) || 1
                 return (
@@ -256,7 +311,7 @@ export default function ExampleProject() {
         {/* INSIGHTS */}
         {tab === 'insights' && (
           <div>
-            {(BP.insights || []).map((ins, i) => {
+            {(proj.insights || []).map((ins, i) => {
               const icons = { overrun: '⚠', accurate: '✓', underrun: '↓', role_shift: '⟳', pattern: '📊' }
               const clrs  = { overrun: 'var(--red)', accurate: 'var(--green)', underrun: 'var(--green)', role_shift: 'var(--blue)', pattern: 'var(--amber)' }
               return (
@@ -269,15 +324,6 @@ export default function ExampleProject() {
                 </div>
               )
             })}
-
-            <Card>
-              <SectionHeader title="Key estimating takeaway" />
-              <div className={styles.takeaway}>
-                Post-cutover support was absent from the original scope and ran to <strong>184 hours</strong> — 3.8× the cutover estimate.
-                Future projects of this type should budget post-cutover support at a minimum of <strong style={{ color: 'var(--orange)' }}>10–15% of total project hours</strong>.
-                Testing &amp; UAT represented <strong>26%</strong> of actual hours, consistent with the 21–28% range seen across all reimplementation projects in the 2025 dataset.
-              </div>
-            </Card>
           </div>
         )}
       </div>

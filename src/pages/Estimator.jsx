@@ -7,7 +7,6 @@ import styles from './Estimator.module.css'
 export default function Estimator() {
   const navigate = useNavigate()
   const engine   = useEngine()
-  const bp       = engine.example_projects?.BP_HPU_STD
 
   return (
     <div className={styles.page}>
@@ -50,31 +49,47 @@ export default function Estimator() {
           </div>
         </Card>
 
-        {/* Example project */}
-        {bp && (
+        {/* Example projects */}
+        {engine.example_projects && Object.keys(engine.example_projects).length > 0 && (
           <Card>
             <SectionHeader
-              title="Example project"
-              sub="Real estimate vs actual data"
+              title="Example projects"
+              sub="Real actuals from completed engagements"
               action={<Pill intent="good">Completed</Pill>}
             />
-            <button
-              className={styles.exampleCard}
-              onClick={() => navigate('/estimator/example/BP_HPU_STD')}
-            >
-              <div className={styles.exampleName}>{bp.name}</div>
-              <div className={styles.exampleType}>{bp.project_type} · {bp.platform}</div>
-              <div className={styles.exampleMeta}>
-                <span>Est: {bp.totals.estimated_hrs}h</span>
-                <span>·</span>
-                <span>Actual: {bp.totals.actual_hrs}h</span>
-                <span>·</span>
-                <span style={{ color: bp.totals.variance_hrs < 0 ? 'var(--green)' : 'var(--red)' }}>
-                  {bp.totals.variance_hrs > 0 ? '+' : ''}{bp.totals.variance_hrs}h
-                </span>
-              </div>
-              <div className={styles.exampleArrow}>View full breakdown →</div>
-            </button>
+            {Object.entries(engine.example_projects).map(([key, proj]) => {
+              const t = proj.totals
+              return (
+                <button
+                  key={key}
+                  className={styles.exampleCard}
+                  onClick={() => navigate(`/estimator/example/${key}`)}
+                >
+                  <div className={styles.exampleName}>{proj.name}</div>
+                  <div className={styles.exampleType}>{proj.project_type} · {proj.platform}</div>
+                  <div className={styles.exampleMeta}>
+                    {t.estimated_hrs ? (
+                      <>
+                        <span>Est: {t.estimated_hrs}h</span>
+                        <span>·</span>
+                        <span>Actual: {t.actual_hrs}h</span>
+                        <span>·</span>
+                        <span style={{ color: t.variance_hrs <= 0 ? 'var(--green)' : 'var(--red)' }}>
+                          {t.variance_hrs > 0 ? '+' : ''}{t.variance_hrs}h
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Actual: {t.actual_hrs}h</span>
+                        <span>·</span>
+                        <span style={{ color: 'var(--orange)' }}>${t.blended_rate}/hr blended</span>
+                      </>
+                    )}
+                  </div>
+                  <div className={styles.exampleArrow}>View full breakdown →</div>
+                </button>
+              )
+            })}
           </Card>
         )}
 
