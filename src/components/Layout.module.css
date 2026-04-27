@@ -30,9 +30,16 @@
 .company {
   font-size: 15px;
   font-weight: 700;
-  color: var(--white);
   letter-spacing: 2px;
   line-height: 1;
+}
+
+.companyTech {
+  color: #888888;
+}
+
+.companyNeaux {
+  color: var(--white);
 }
 
 .tagline {

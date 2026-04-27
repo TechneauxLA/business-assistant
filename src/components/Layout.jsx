@@ -17,8 +17,11 @@ export default function Layout({ children }) {
         <div className={styles.logo}>
           <LogoMark />
           <div>
-            <div className={styles.company}>TECHNEAUX</div>
-            <div className={styles.tagline}>PROJECT ESTIMATOR</div>
+            <div className={styles.company}>
+              <span className={styles.companyTech}>TECH</span>
+              <span className={styles.companyNeaux}>NEAUX</span>
+            </div>
+            <div className={styles.tagline}>TECHNOLOGY SERVICES</div>
           </div>
         </div>
       </header>
@@ -59,9 +62,11 @@ function NavItem({ path, label, active, children }) {
 
 function LogoMark() {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <rect x="13" y="2" width="6" height="28" rx="2" fill="#E8722A" transform="rotate(45 16 16)" />
-      <rect x="13" y="2" width="6" height="28" rx="2" fill="#F0894A" transform="rotate(-45 16 16)" />
+    <svg width="42" height="35" viewBox="0 0 42 35" fill="none">
+      {/* Gray band: upper-left to lower-right (background layer) */}
+      <path d="M0 0 L12 0 L42 35 L30 35 Z" fill="#666666"/>
+      {/* Orange band: upper-right to lower-left (foreground layer) */}
+      <path d="M30 0 L42 0 L12 35 L0 35 Z" fill="#E8722A"/>
     </svg>
   )
 }

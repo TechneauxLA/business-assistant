@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { supabase } from './lib/supabase'
-import Login       from './pages/Login'
 import Estimator   from './pages/Estimator'
 import NewEstimate from './pages/NewEstimate'
 import SavedEstimates from './pages/SavedEstimates'
@@ -10,24 +9,15 @@ import Settings    from './pages/Settings'
 import Layout      from './components/Layout'
 
 export default function App() {
-  const [session, setSession] = useState(undefined) // undefined = loading
+  const [ready, setReady] = useState(false)
 
   useEffect(() => {
-    // If no Supabase configured, run in demo mode (internal dev)
-    if (!supabase) { setSession({ demo: true }); return }
-
-    supabase.auth.getSession().then(({ data: { session } }) => setSession(session))
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session)
-    })
-    return () => subscription.unsubscribe()
+    // Skip auth for initial testing — restore login gate when auth is needed
+    if (!supabase) { setReady(true); return }
+    supabase.auth.getSession().then(() => setReady(true))
   }, [])
 
-  // Show blank while checking auth
-  if (session === undefined) return <div style={{ background: '#1A1A1A', minHeight: '100dvh' }} />
-
-  // Not logged in
-  if (!session) return <Login />
+  if (!ready) return <div style={{ background: '#1A1A1A', minHeight: '100dvh' }} />
 
   return (
     <Layout>
