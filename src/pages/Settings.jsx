@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { supabase } from '../lib/supabase'
 import { Card, SectionHeader, Button, ROLE_COLORS } from '../components/UI'
-import ENGINE from '../data/estimationEngine.json'
+import { useEngine } from '../lib/useEngine'
 import styles from './Settings.module.css'
 
 export default function Settings() {
-  const [rates, setRates] = useState({ ...ENGINE.rates })
+  const engine = useEngine()
+  const [rates, setRates] = useState(() => ({ ...engine.rates }))
   const [saved, setSaved] = useState(false)
 
   async function handleSignOut() {
@@ -26,7 +27,7 @@ export default function Settings() {
 
         <Card>
           <SectionHeader title="Bill rates" sub="Default rates used in new estimates" />
-          {(ENGINE.roles || []).map(role => (
+          {(engine.roles || []).map(role => (
             <div key={role} className={styles.rateRow}>
               <div className={styles.roleDot} style={{ background: ROLE_COLORS[role] || '#888' }} />
               <div className={styles.roleLabel}>{role}</div>
@@ -56,11 +57,11 @@ export default function Settings() {
           </div>
           <div className={styles.infoRow}>
             <span className={styles.infoLabel}>Project types</span>
-            <span className={styles.infoVal}>{Object.keys(ENGINE.phase_pcts_by_type || {}).length}</span>
+            <span className={styles.infoVal}>{Object.keys(engine.phase_pcts_by_type || {}).length}</span>
           </div>
           <div className={styles.infoRow}>
             <span className={styles.infoLabel}>Benchmark project</span>
-            <span className={styles.infoVal}>{ENGINE.example_projects?.BP_HPU_STD?.name || '—'}</span>
+            <span className={styles.infoVal}>{engine.example_projects?.BP_HPU_STD?.name || '—'}</span>
           </div>
           <div className={styles.infoRow}>
             <span className={styles.infoLabel}>Total hours analyzed</span>

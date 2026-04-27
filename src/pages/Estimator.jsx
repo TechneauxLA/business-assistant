@@ -1,12 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Card, SectionHeader, Pill } from '../components/UI'
-import ENGINE from '../data/estimationEngine.json'
+import { useEngine } from '../lib/useEngine'
 import styles from './Estimator.module.css'
 
 export default function Estimator() {
   const navigate = useNavigate()
-  const bp = ENGINE.example_projects?.BP_HPU_STD
+  const engine   = useEngine()
+  const bp       = engine.example_projects?.BP_HPU_STD
 
   return (
     <div className={styles.page}>
@@ -80,7 +81,7 @@ export default function Estimator() {
         {/* Project type reference */}
         <Card>
           <SectionHeader title="Historical phase splits" sub="% of total hours by project type" />
-          {Object.entries(ENGINE.phase_pcts_by_type || {}).map(([type, pcts]) => (
+          {Object.entries(engine.phase_pcts_by_type || {}).map(([type, pcts]) => (
             <div key={type} className={styles.typeBlock}>
               <div className={styles.typeName}>{type}</div>
               {Object.entries(pcts)

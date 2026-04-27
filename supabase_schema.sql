@@ -50,5 +50,35 @@ create trigger estimates_updated_at
   before update on public.estimates
   for each row execute function update_updated_at();
 
+-- ── Engine config table ───────────────────────────────────────
+-- Stores the estimation engine JSON (phases, rates, benchmarks).
+-- Readable by all authenticated users; writes are admin-only (dashboard or service role).
+-- Seed initial data by running supabase_seed_engine.sql after this script.
+
+create table if not exists public.engine_config (
+  key        text primary key,
+  data       jsonb not null,
+  updated_at timestamptz default now()
+);
+
+alter table public.engine_config enable row level security;
+
+create policy "Authenticated users can read engine config"
+  on public.engine_config for select
+  to authenticated
+  using (true);
+
+create or replace function update_engine_config_updated_at()
+returns trigger as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$ language plpgsql;
+
+create trigger engine_config_updated_at
+  before update on public.engine_config
+  for each row execute function update_engine_config_updated_at();
+
 -- ── Confirm ───────────────────────────────────────────────────
-select 'Setup complete. Estimates table ready.' as status;
+select 'Setup complete. Estimates + engine_config tables ready.' as status;

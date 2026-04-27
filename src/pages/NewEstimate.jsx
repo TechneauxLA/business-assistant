@@ -2,13 +2,8 @@ import React, { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { Card, Label, MetricCard, Chip, Select, NumberInput, Button, RoleMixBar, ROLE_COLORS, Divider, SectionHeader } from '../components/UI'
-import ENGINE from '../data/estimationEngine.json'
+import { useEngine } from '../lib/useEngine'
 import styles from './NewEstimate.module.css'
-
-const PHASES = ENGINE.canon_phases || []
-const SUBS   = ENGINE.canon_subphases || []
-const RATES  = ENGINE.rates || {}
-const ROLES  = ENGINE.roles || []
 
 const PROJECT_TYPES = [
   { value: 'Reimplementation / Standardization', label: 'Reimplementation / Standardization' },
@@ -18,18 +13,24 @@ const PROJECT_TYPES = [
 
 export default function NewEstimate() {
   const navigate = useNavigate()
+  const engine   = useEngine()
+  const PHASES   = engine.canon_phases    || []
+  const SUBS     = engine.canon_subphases || []
+  const RATES    = engine.rates           || {}
+  const ROLES    = engine.roles           || []
+
   const [step,         setStep]         = useState(0) // 0=config, 1=scope, 2=rates, 3=results
   const [projectName,  setProjectName]  = useState('')
   const [projectType,  setProjectType]  = useState('Reimplementation / Standardization')
   const [totalHours,   setTotalHours]   = useState(500)
-  const [activePhases, setActivePhases] = useState(new Set(PHASES.slice(0, 6)))
-  const [activeSubs,   setActiveSubs]   = useState(new Set(SUBS))
-  const [rates,        setRates]        = useState({ ...RATES })
+  const [activePhases, setActivePhases] = useState(() => new Set(PHASES.slice(0, 6)))
+  const [activeSubs,   setActiveSubs]   = useState(() => new Set(SUBS))
+  const [rates,        setRates]        = useState(() => ({ ...RATES }))
   const [saving,       setSaving]       = useState(false)
 
-  const pcts      = ENGINE.phase_pcts_by_type?.[projectType] || {}
-  const roleSplit = ENGINE.role_splits_by_phase || {}
-  const bp        = ENGINE.bp_benchmark || {}
+  const pcts      = engine.phase_pcts_by_type?.[projectType] || {}
+  const roleSplit = engine.role_splits_by_phase || {}
+  const bp        = engine.bp_benchmark || {}
 
   // ── Core calculation ──────────────────────────────────────────
   const estimate = useMemo(() => {
@@ -86,7 +87,7 @@ export default function NewEstimate() {
 
     const avgRate = grandHrs > 0 ? totalCost / grandHrs : 0
     return { grandHrs: Math.round(grandHrs), totalCost: Math.round(totalCost), avgRate: Math.round(avgRate), roleTotals, phaseRows }
-  }, [projectType, totalHours, activePhases, activeSubs, rates])
+  }, [engine, projectType, totalHours, activePhases, activeSubs, rates])
 
   // ── Save to Supabase ──────────────────────────────────────────
   async function saveEstimate() {

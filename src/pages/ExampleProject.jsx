@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Card, SectionHeader, Pill, RoleMixBar, ROLE_COLORS, Variance } from '../components/UI'
-import ENGINE from '../data/estimationEngine.json'
+import { useEngine } from '../lib/useEngine'
 import styles from './ExampleProject.module.css'
-
-const BP = ENGINE.example_projects?.BP_HPU_STD
 
 export default function ExampleProject() {
   const navigate   = useNavigate()
+  const engine     = useEngine()
+  const BP         = engine.example_projects?.BP_HPU_STD
   const [tab, setTab] = useState('overview')
   const [expanded, setExpanded] = useState(new Set([0]))
 
@@ -199,7 +199,7 @@ export default function ExampleProject() {
               {Object.entries(tot.roles_actual).filter(([, h]) => h > 0).map(([role, hrs]) => {
                 const total = Object.values(tot.roles_actual).reduce((a, b) => a + b, 0)
                 const pct   = Math.round(hrs / total * 100)
-                const rate  = ENGINE.rates?.[role] || 0
+                const rate  = engine.rates?.[role] || 0
                 return (
                   <div key={role} className={styles.roleRow}>
                     <div className={styles.roleDotLg} style={{ background: ROLE_COLORS[role] || '#888' }} />
