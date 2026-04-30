@@ -34,24 +34,55 @@ const TYPE_LABELS = {
 export default function Estimator() {
   const navigate      = useNavigate()
   const engine        = useEngine()
+
+  // Example projects filter state
+  const [exFilterType,  setExFilterType]  = useState('all')
+  const [exFilterPhase, setExFilterPhase] = useState('all')
+
+  // Phase accuracy analysis filter
   const [analysisType, setAnalysisType] = useState('all')
 
-  // ── Analysis aggregation ────────────────────────────────────────
-  const allProjects = Object.values(engine.example_projects || {})
+  // ── All projects (exclude Greenfield) ──────────────────────────
+  const allProjects = useMemo(() =>
+    Object.values(engine.example_projects || {}).filter(p => p.project_type !== 'Greenfield / Other'),
+    [engine.example_projects]
+  )
 
   const projectTypes = useMemo(() => {
     const types = [...new Set(allProjects.map(p => p.project_type))]
-    return types.filter(t => t !== 'Greenfield / Other')
+    return types.filter(Boolean)
   }, [allProjects])
 
+  // ── Example projects filtered list ─────────────────────────────
+  const filteredExamples = useMemo(() =>
+    exFilterType === 'all'
+      ? allProjects
+      : allProjects.filter(p => p.project_type === exFilterType),
+    [allProjects, exFilterType]
+  )
+
+  // ── Phase-specific data for example project chips ──────────────
+  // For a given project, get est/actual hours for the selected canonical phase
+  function getPhaseData(proj, canonPhase) {
+    if (!proj.phases || canonPhase === 'all') return null
+    let est = 0, act = 0, hasEst = false, hasAct = false
+    proj.phases.forEach(ph => {
+      if (toCanon(ph.phase) !== canonPhase) return
+      if (ph.estimated_hrs) { est += ph.estimated_hrs; hasEst = true }
+      if (ph.actual_hrs)    { act += ph.actual_hrs;    hasAct = true }
+    })
+    if (!hasEst && !hasAct) return null
+    return { est: hasEst ? Math.round(est) : null, act: Math.round(act), hasEst }
+  }
+
+  // ── Analysis aggregation ────────────────────────────────────────
   const filteredProjects = useMemo(() =>
     analysisType === 'all'
-      ? allProjects.filter(p => p.project_type !== 'Greenfield / Other')
+      ? allProjects
       : allProjects.filter(p => p.project_type === analysisType),
     [allProjects, analysisType]
   )
 
-  // Only projects that have at least one phase with both est and actual
   const comparableProjects = useMemo(() =>
     filteredProjects.filter(p =>
       p.totals?.estimated_hrs && p.totals?.actual_hrs
@@ -64,7 +95,6 @@ export default function Estimator() {
     CANON_PHASES.forEach(cp => { agg[cp] = { estSamples: [], actSamples: [] } })
 
     comparableProjects.forEach(proj => {
-      // bucket each raw phase into a canonical bucket PER PROJECT (sum within project first)
       const projBuckets = {}
       ;(proj.phases || []).forEach(ph => {
         const canon = toCanon(ph.phase)
@@ -73,7 +103,6 @@ export default function Estimator() {
         if (ph.estimated_hrs) { projBuckets[canon].est += ph.estimated_hrs; projBuckets[canon].hasEst = true }
         if (ph.actual_hrs)    { projBuckets[canon].act += ph.actual_hrs;    projBuckets[canon].hasAct = true }
       })
-      // push each project's bucket total as one sample
       Object.entries(projBuckets).forEach(([canon, vals]) => {
         if (vals.hasEst) agg[canon].estSamples.push(vals.est)
         if (vals.hasAct) agg[canon].actSamples.push(vals.act)
@@ -134,15 +163,82 @@ export default function Estimator() {
         </Card>
 
         {/* Example projects */}
-        {engine.example_projects && Object.keys(engine.example_projects).length > 0 && (
+        {allProjects.length > 0 && (
           <Card>
             <SectionHeader
               title="Example projects"
               sub="Real actuals from completed engagements"
               action={<Pill intent="good">Completed</Pill>}
             />
-            {Object.entries(engine.example_projects).map(([key, proj]) => {
-              const t = proj.totals
+
+            {/* Type + phase filters */}
+            <div className={styles.analysisFilters}>
+              <select
+                className={styles.typeSelect}
+                value={exFilterType}
+                onChange={e => { setExFilterType(e.target.value); setExFilterPhase('all') }}
+              >
+                <option value="all">All project types</option>
+                {projectTypes.map(t => (
+                  <option key={t} value={t}>{TYPE_LABELS[t] || t}</option>
+                ))}
+              </select>
+              <select
+                className={styles.typeSelect}
+                value={exFilterPhase}
+                onChange={e => setExFilterPhase(e.target.value)}
+              >
+                <option value="all">All phases</option>
+                {CANON_PHASES.map(ph => (
+                  <option key={ph} value={ph}>{ph}</option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.analysisMeta} style={{ marginBottom: 10 }}>
+              {filteredExamples.length} project{filteredExamples.length !== 1 ? 's' : ''}
+              {exFilterPhase !== 'all' ? ` · showing ${exFilterPhase} phase` : ''}
+            </div>
+
+            {/* Project cards */}
+            {filteredExamples.map(proj => {
+              const key = proj.id || Object.keys(engine.example_projects || {}).find(k => engine.example_projects[k] === proj)
+              const t   = proj.totals
+              const phaseData = getPhaseData(proj, exFilterPhase)
+
+              // What to show in the meta line
+              let metaContent
+              if (exFilterPhase !== 'all' && phaseData) {
+                const vr = phaseData.hasEst ? phaseData.act - phaseData.est : null
+                const vrColor = vr == null ? 'var(--mid-gray)' : vr > 0 ? 'var(--red)' : 'var(--green)'
+                metaContent = (
+                  <>
+                    {phaseData.hasEst && <><span>Est: {phaseData.est}h</span><span>·</span></>}
+                    <span>Actual: {phaseData.act}h</span>
+                    {vr != null && <><span>·</span><span style={{ color: vrColor }}>{vr > 0 ? '+' : ''}{vr}h</span></>}
+                  </>
+                )
+              } else if (t.estimated_hrs) {
+                metaContent = (
+                  <>
+                    <span>Est: {t.estimated_hrs}h</span>
+                    <span>·</span>
+                    <span>Actual: {t.actual_hrs}h</span>
+                    <span>·</span>
+                    <span style={{ color: t.variance_hrs <= 0 ? 'var(--green)' : 'var(--red)' }}>
+                      {t.variance_hrs > 0 ? '+' : ''}{t.variance_hrs}h
+                    </span>
+                  </>
+                )
+              } else {
+                metaContent = (
+                  <>
+                    <span>Actual: {t.actual_hrs}h</span>
+                    <span>·</span>
+                    <span style={{ color: 'var(--orange)' }}>${t.blended_rate}/hr blended</span>
+                  </>
+                )
+              }
+
               return (
                 <button
                   key={key}
@@ -151,29 +247,15 @@ export default function Estimator() {
                 >
                   <div className={styles.exampleName}>{proj.name}</div>
                   <div className={styles.exampleType}>{proj.project_type} · {proj.platform}</div>
-                  <div className={styles.exampleMeta}>
-                    {t.estimated_hrs ? (
-                      <>
-                        <span>Est: {t.estimated_hrs}h</span>
-                        <span>·</span>
-                        <span>Actual: {t.actual_hrs}h</span>
-                        <span>·</span>
-                        <span style={{ color: t.variance_hrs <= 0 ? 'var(--green)' : 'var(--red)' }}>
-                          {t.variance_hrs > 0 ? '+' : ''}{t.variance_hrs}h
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <span>Actual: {t.actual_hrs}h</span>
-                        <span>·</span>
-                        <span style={{ color: 'var(--orange)' }}>${t.blended_rate}/hr blended</span>
-                      </>
-                    )}
-                  </div>
+                  <div className={styles.exampleMeta}>{metaContent}</div>
                   <div className={styles.exampleArrow}>View full breakdown →</div>
                 </button>
               )
             })}
+
+            {filteredExamples.length === 0 && (
+              <div className={styles.emptyAnalysis}>No projects match this filter</div>
+            )}
           </Card>
         )}
 
