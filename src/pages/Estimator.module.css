@@ -39,3 +39,53 @@
 .phaseBar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
 .phaseBarFill { height: 100%; background: var(--orange); border-radius: 3px; }
 .phasePct { font-size: 11px; color: var(--mid-gray); width: 36px; text-align: right; flex-shrink: 0; }
+
+/* Analysis section */
+.analysisFilters {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;
+}
+.typeSelect {
+  background: var(--charcoal-lt); border: 1px solid var(--border); color: var(--off-white);
+  font-size: 13px; padding: 8px 12px; border-radius: var(--radius);
+  font-family: inherit; min-height: 40px; flex: 1; min-width: 0;
+}
+.typeSelect:focus { outline: none; border-color: var(--orange); }
+.analysisMeta { font-size: 11px; color: var(--mid-gray); flex-shrink: 0; }
+
+/* Project chips */
+.projChips { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
+.projChip {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--charcoal-lt); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 8px 12px; cursor: pointer;
+  width: 100%; text-align: left; transition: border-color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.projChip:hover { border-color: rgba(232,114,42,.35); }
+.projChipName { font-size: 12px; color: var(--light-gray); }
+.projChipVar  { font-size: 12px; font-weight: 600; flex-shrink: 0; margin-left: 8px; }
+
+/* Phase accuracy bars */
+.phaseAnalysis { display: flex; flex-direction: column; gap: 12px; }
+.phaseAnalysisLegend { display: flex; gap: 16px; margin-bottom: 4px; }
+.legendEst { font-size: 11px; color: var(--border); }
+.legendAct { font-size: 11px; color: var(--orange); }
+.phaseAnalysisRow { display: flex; flex-direction: column; gap: 4px; }
+.phaseAnalysisLabel {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 12px; color: var(--white); font-weight: 600;
+}
+.phaseSampleCount { font-size: 10px; color: var(--mid-gray); font-weight: 400; }
+.phaseDualBars { display: flex; flex-direction: column; gap: 3px; }
+.barWrap { display: flex; align-items: center; gap: 8px; min-height: 16px; }
+.barEst {
+  height: 8px; border-radius: 3px; background: var(--border); flex-shrink: 0;
+  min-width: 2px; transition: width 0.3s ease;
+}
+.barAct {
+  height: 10px; border-radius: 3px; background: var(--orange); flex-shrink: 0;
+  min-width: 2px; transition: width 0.3s ease;
+}
+.barLabel { font-size: 11px; color: var(--mid-gray); white-space: nowrap; }
+.varTag { font-weight: 700; }
+.emptyAnalysis { font-size: 12px; color: var(--mid-gray); text-align: center; padding: 16px 0; }

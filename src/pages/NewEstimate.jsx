@@ -10,7 +10,6 @@ const PROJECT_TYPES = [
   { value: 'Migration',                          label: 'Migration (CygNet → CygNet)' },
   { value: 'Migration_to_Ignition',              label: 'Migration (CygNet → Ignition)' },
   { value: 'Upgrade',                            label: 'CygNet Upgrade' },
-  { value: 'Greenfield / Other',                 label: 'Greenfield / Other' },
 ]
 
 const COMPLEXITY_LEVELS = [
