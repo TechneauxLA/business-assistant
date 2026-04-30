@@ -35,16 +35,16 @@ export default function Estimator() {
           <SectionHeader title="Estimation engine" sub="Powered by 2025 ConnectWise data" />
           <div className={styles.statsRow}>
             <div className={styles.stat}>
-              <div className={styles.statValue}>94,753h</div>
+              <div className={styles.statValue}>51,626h</div>
               <div className={styles.statLabel}>Hours analyzed</div>
             </div>
             <div className={styles.stat}>
-              <div className={styles.statValue}>3</div>
-              <div className={styles.statLabel}>Project types</div>
+              <div className={styles.statValue}>17</div>
+              <div className={styles.statLabel}>Projects</div>
             </div>
             <div className={styles.stat}>
-              <div className={styles.statValue}>7</div>
-              <div className={styles.statLabel}>Phase categories</div>
+              <div className={styles.statValue}>4</div>
+              <div className={styles.statLabel}>Project types</div>
             </div>
           </div>
         </Card>

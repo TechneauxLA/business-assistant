@@ -1249,7 +1249,7 @@
       "Deployment & Post-Cutover": {
         "estimated_hrs": 66.5,
         "actual_hrs": 250.5,
-        "variance_note": "Significantly underestimated \u2014 post-cutover support was 3x the estimate",
+        "variance_note": "Significantly underestimated — post-cutover support was 3x the estimate",
         "subphases": {
           "Cutover": {
             "est": 66.5,
@@ -1306,14 +1306,12 @@
   },
   "phase_pcts_by_type": {
     "Migration": {
-      "Discovery & Requirements": 1.3,
-      "Analysis & Design": 1.5,
-      "Implementation": 53.7,
-      "Testing & UAT": 28.6,
-      "Deployment & Post-Cutover": 4.7,
-      "Project Management": 0.3,
-      "Travel": 0.0,
-      "Misc": 0.1
+      "Discovery & Requirements": 8.0,
+      "Analysis & Design": 10.0,
+      "Implementation": 48.0,
+      "Testing & UAT": 16.0,
+      "Deployment & Post-Cutover": 8.0,
+      "Project Management": 10.0
     },
     "Reimplementation / Standardization": {
       "Discovery & Requirements": 4.5,
@@ -1332,6 +1330,13 @@
       "Deployment & Post-Cutover": 1.6,
       "Project Management": 0.3,
       "Misc": 2.1
+    },
+    "Upgrade": {
+      "Implementation": 55.0,
+      "Deployment & Post-Cutover": 20.0,
+      "Project Management": 13.0,
+      "Discovery & Requirements": 6.0,
+      "Testing & UAT": 6.0
     }
   },
   "role_splits_by_phase": {
@@ -1385,7 +1390,7 @@
   "example_projects": {
     "BP_HPU_STD": {
       "id": "BP_HPU_STD",
-      "name": "BP \u2013 HPU Standardization",
+      "name": "BP – HPU Standardization",
       "project_type": "Reimplementation / Standardization",
       "platform": "CygNet",
       "data_source": "BP.xlsx (Actual + Estimate tabs)",
@@ -1785,7 +1790,7 @@
                 "Expert": 86.5,
                 "Integrator": 74.5
               },
-              "variance_note": "Unscoped \u2014 not in original estimate"
+              "variance_note": "Unscoped — not in original estimate"
             }
           ],
           "estimated_hrs": 66.5,
@@ -1827,7 +1832,7 @@
         {
           "type": "accurate",
           "phase": "Analysis & Design / Implementation / Testing",
-          "text": "All three core technical phases matched their estimates exactly \u2014 A&D (475h), Implementation (424h), and Testing (475.5h) each came in at 100% of estimate. The CygNet work-type scoping methodology was highly accurate."
+          "text": "All three core technical phases matched their estimates exactly — A&D (475h), Implementation (424h), and Testing (475.5h) each came in at 100% of estimate. The CygNet work-type scoping methodology was highly accurate."
         },
         {
           "type": "underrun",
@@ -1837,28 +1842,28 @@
         {
           "type": "overrun",
           "phase": "Deployment & Post-Cutover",
-          "text": "Deployment & Post-Cutover drove the entire project overrun. Cutover itself was on-target (66.5h), but 184h of post-cutover support was completely unscoped \u2014 2.77\u00d7 the deployment estimate alone. Future projects must include post-cutover support as a standalone scope item."
+          "text": "Deployment & Post-Cutover drove the entire project overrun. Cutover itself was on-target (66.5h), but 184h of post-cutover support was completely unscoped — 2.77× the deployment estimate alone. Future projects must include post-cutover support as a standalone scope item."
         },
         {
           "type": "pattern",
           "phase": "Overall",
-          "text": "Integrator hours dominated at 55% of technical time (1,008.5h) \u2014 consistent with standardization-type work where most hands-on CygNet configuration is Integrator-level. Expert (36%) handled analysis and testing leadership."
+          "text": "Integrator hours dominated at 55% of technical time (1,008.5h) — consistent with standardization-type work where most hands-on CygNet configuration is Integrator-level. Expert (36%) handled analysis and testing leadership."
         },
         {
           "type": "pattern",
           "phase": "Testing & UAT",
-          "text": "Testing consumed 475.5h \u2014 26% of total technical hours (1,832.5h). The Architect-heavy testing phase (90h, 19% of testing) reflects significant server prep and validation work that is often underestimated in initial scopes."
+          "text": "Testing consumed 475.5h — 26% of total technical hours (1,832.5h). The Architect-heavy testing phase (90h, 19% of testing) reflects significant server prep and validation work that is often underestimated in initial scopes."
         },
         {
           "type": "accurate",
           "phase": "Overall",
-          "text": "Net project variance: +169.0h (+8.6%) over a 1,959.0h estimate \u2014 driven entirely by unscoped post-cutover support. Excluding that single line item, the project delivered within 15h of estimate across all other phases combined."
+          "text": "Net project variance: +169.0h (+8.6%) over a 1,959.0h estimate — driven entirely by unscoped post-cutover support. Excluding that single line item, the project delivered within 15h of estimate across all other phases combined."
         }
       ]
     },
     "CONOCO_PERM_STD": {
       "id": "CONOCO_PERM_STD",
-      "name": "Conoco Phillips Permian \u2013 Standardization",
+      "name": "Conoco Phillips Permian – Standardization",
       "project_type": "Reimplementation / Standardization",
       "platform": "CygNet",
       "data_source": "Project_Actuals_V1.xlsx + Project_Est_V1.xlsx",
@@ -2257,43 +2262,43 @@
           "type": "overrun",
           "phase": "Overall",
           "severity": "high",
-          "text": "Total actuals (5,292h) ran 2.9\u00d7 the original estimate (1,832h). This is the single most significant pattern \u2014 scope was dramatically underestimated at the outset."
+          "text": "Total actuals (5,292h) ran 2.9× the original estimate (1,832h). This is the single most significant pattern — scope was dramatically underestimated at the outset."
         },
         {
           "type": "overrun",
           "phase": "Analysis & Design",
           "severity": "high",
-          "text": "Analysis & Design ran 612h actual vs 132h estimated \u2014 a 4.6\u00d7 overrun. Design complexity (screens, facilities, point translation, custom scripts) was the primary driver."
+          "text": "Analysis & Design ran 612h actual vs 132h estimated — a 4.6× overrun. Design complexity (screens, facilities, point translation, custom scripts) was the primary driver."
         },
         {
           "type": "overrun",
           "phase": "Discovery & Requirements",
           "severity": "medium",
-          "text": "Cleanup/Pre-work alone consumed 563.5h \u2014 3\u00d7 the entire estimated D&R phase. Tag cleanup, facility prep, and server setup were severely underscoped."
+          "text": "Cleanup/Pre-work alone consumed 563.5h — 3× the entire estimated D&R phase. Tag cleanup, facility prep, and server setup were severely underscoped."
         },
         {
           "type": "pattern",
           "phase": "Implementation",
-          "text": "Implementation was Integrator-heavy (56%) and Specialist-heavy (25%) as expected for standardization work. Architect utilization dropped to 13% in implementation \u2014 consistent with the broader pattern."
+          "text": "Implementation was Integrator-heavy (56%) and Specialist-heavy (25%) as expected for standardization work. Architect utilization dropped to 13% in implementation — consistent with the broader pattern."
         },
         {
           "type": "accurate",
           "phase": "Testing & UAT",
-          "text": "Testing & UAT was the most accurately estimated phase: 348.5h actual vs 292h estimated (1.2\u00d7 ratio). Testing scope was better-defined than earlier phases."
+          "text": "Testing & UAT was the most accurately estimated phase: 348.5h actual vs 292h estimated (1.2× ratio). Testing scope was better-defined than earlier phases."
         },
         {
           "type": "underrun",
           "phase": "Deployment & Post-Cutover",
-          "text": "Deployment came in at 39.5h \u2014 well under the 80h estimate. Tight execution or scope reduction at cutover kept deployment lean."
+          "text": "Deployment came in at 39.5h — well under the 80h estimate. Tight execution or scope reduction at cutover kept deployment lean."
         }
       ]
     },
     "CONOCO_DEL_STD": {
       "id": "CONOCO_DEL_STD",
-      "name": "Conoco Phillips Delaware \u2013 Standardization + Merger",
+      "name": "Conoco Phillips Delaware – Standardization + Merger",
       "project_type": "Reimplementation / Standardization",
       "platform": "CygNet",
-      "data_source": "Project_Actuals_V1.xlsx \u2014 Conoco-Del sheet",
+      "data_source": "Project_Actuals_V1.xlsx — Conoco-Del sheet",
       "scope_note": "~300K points, 84 pts/hr, 3 sites, 792 pre-built screens, 1 standardization + 1 merger in scope",
       "totals": {
         "actual_hrs": 4102.8,
@@ -2464,36 +2469,36 @@
         {
           "type": "pattern",
           "phase": "Implementation",
-          "text": "This project carried two implementation phases in parallel: Standardization (690.5h) and a Merger (721.5h). Together they represent 69% of core project hours \u2014 nearly double a typical single-scope project."
+          "text": "This project carried two implementation phases in parallel: Standardization (690.5h) and a Merger (721.5h). Together they represent 69% of core project hours — nearly double a typical single-scope project."
         },
         {
           "type": "pattern",
           "phase": "Testing & UAT",
-          "text": "Testing ran 940h (27% of total) driven by the dual-scope. Merger Testing alone was 617.5h and was Architect-heavy (25%) \u2014 indicating significant technical complexity in the merger validation layer."
+          "text": "Testing ran 940h (27% of total) driven by the dual-scope. Merger Testing alone was 617.5h and was Architect-heavy (25%) — indicating significant technical complexity in the merger validation layer."
         },
         {
           "type": "role_shift",
           "phase": "Implementation",
-          "text": "Expert utilization was 0% across all implementation and testing phases \u2014 all technical execution was split between Architect, Integrator, and Specialist. This suggests work that required either senior architects or hands-on configuration specialists with no mid-level expert involvement."
+          "text": "Expert utilization was 0% across all implementation and testing phases — all technical execution was split between Architect, Integrator, and Specialist. This suggests work that required either senior architects or hands-on configuration specialists with no mid-level expert involvement."
         },
         {
           "type": "pattern",
           "phase": "Deployment & Post-Cutover",
-          "text": "Post-cutover support (128.5h) nearly equaled deployment (126h). For dual-scope projects, post-cutover support should be scoped as a separate phase \u2014 not assumed to be minor."
+          "text": "Post-cutover support (128.5h) nearly equaled deployment (126h). For dual-scope projects, post-cutover support should be scoped as a separate phase — not assumed to be minor."
         },
         {
           "type": "accurate",
           "phase": "Overall",
-          "text": "Invoiced revenue of $551,405.97 vs formula cost of $438,748 \u2014 representing a 25.7% premium above direct labor cost. PM overhead and project coordination account for this delta."
+          "text": "Invoiced revenue of $551,405.97 vs formula cost of $438,748 — representing a 25.7% premium above direct labor cost. PM overhead and project coordination account for this delta."
         }
       ]
     },
     "DGO_STD": {
       "id": "DGO_STD",
-      "name": "DGO \u2013 Standardization",
+      "name": "DGO – Standardization",
       "project_type": "Reimplementation / Standardization",
       "platform": "CygNet",
-      "data_source": "Project_Actuals_V1.xlsx \u2014 DGO sheet",
+      "data_source": "Project_Actuals_V1.xlsx — DGO sheet",
       "totals": {
         "actual_hrs": 2241.0,
         "actual_cost": 329505,
@@ -2621,29 +2626,1889 @@
         {
           "type": "pattern",
           "phase": "Implementation",
-          "text": "DGO was an Expert/Integrator-driven project \u2014 Architect utilization was only 2% of total hours (50h of 2,241h). This is the lowest Architect intensity in the dataset and suggests a well-defined scope executed by mid-level practitioners."
+          "text": "DGO was an Expert/Integrator-driven project — Architect utilization was only 2% of total hours (50h of 2,241h). This is the lowest Architect intensity in the dataset and suggests a well-defined scope executed by mid-level practitioners."
         },
         {
           "type": "pattern",
           "phase": "Implementation",
-          "text": "Implementation consumed 56.5% of total project hours (1,267h). Expert (611h) and Integrator (654.5h) split implementation nearly 50/50 \u2014 an unusually balanced split that indicates parallel workstreams."
+          "text": "Implementation consumed 56.5% of total project hours (1,267h). Expert (611h) and Integrator (654.5h) split implementation nearly 50/50 — an unusually balanced split that indicates parallel workstreams."
         },
         {
           "type": "pattern",
           "phase": "Testing & UAT",
-          "text": "Testing & UAT (525h) was 23.4% of total hours \u2014 consistent with the 21\u201328% historical range for reimplementation projects. The Expert-Integrator split in testing (281h/244h) mirrors the implementation pattern."
+          "text": "Testing & UAT (525h) was 23.4% of total hours — consistent with the 21–28% historical range for reimplementation projects. The Expert-Integrator split in testing (281h/244h) mirrors the implementation pattern."
         },
         {
           "type": "accurate",
           "phase": "Discovery & Requirements",
-          "text": "Discovery was lean at 57.5h (2.6% of project). For a standardization project with well-understood scope and existing CygNet infrastructure, this is appropriate \u2014 no Integrator discovery work was needed."
+          "text": "Discovery was lean at 57.5h (2.6% of project). For a standardization project with well-understood scope and existing CygNet infrastructure, this is appropriate — no Integrator discovery work was needed."
         },
         {
           "type": "role_shift",
           "phase": "Project Management",
-          "text": "No Specialist hours were logged on this project \u2014 zero. DGO's scope did not include the specialist-intensive work (tag translation, UDC management) seen in larger Conoco engagements."
+          "text": "No Specialist hours were logged on this project — zero. DGO's scope did not include the specialist-intensive work (tag translation, UDC management) seen in larger Conoco engagements."
+        }
+      ]
+    },
+    "HILCORP_XTO_MIG": {
+      "id": "HILCORP_XTO_MIG",
+      "name": "Hilcorp – XTO Acquisition Migration",
+      "project_type": "Migration",
+      "platform": "CygNet",
+      "scope_note": "CygNet-to-CygNet acquisition migration. Standard phase structure: requirements → data discovery → functional design → implementation → testing → deployment.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 1772,
+        "actual_hrs": 1594.0,
+        "variance_hrs": -178.0,
+        "variance_pct": -10.0,
+        "estimated_cost": 285629,
+        "actual_cost": 256937,
+        "invoiced_revenue": 256930.0,
+        "roles_actual": {
+          "Architect": 665.5,
+          "Integrator": 629.5,
+          "Project Manager": 239.0,
+          "Specialist": 60.0
+        },
+        "blended_rate": 161.19,
+        "team_size": 4,
+        "revenue_per_member": 64232
+      },
+      "phases": [
+        {
+          "phase": "Requirements Gathering",
+          "estimated_hrs": 69,
+          "actual_hrs": 37.5,
+          "roles_actual": {
+            "Project Manager": 11.5,
+            "Architect": 26.0
+          },
+          "subphases": [
+            {
+              "name": "MVP",
+              "est": null,
+              "actual": 11.5,
+              "roles": {
+                "Project Manager": 11.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Data Discovery, Collection & Cleanup",
+          "estimated_hrs": 140,
+          "actual_hrs": 107.5,
+          "roles_actual": {
+            "Architect": 70.5,
+            "Integrator": 34.0,
+            "Project Manager": 3.0
+          },
+          "subphases": [
+            {
+              "name": "MVP",
+              "est": null,
+              "actual": 29.0,
+              "roles": {
+                "Integrator": 29.0
+              }
+            },
+            {
+              "name": "Standard Project",
+              "est": null,
+              "actual": 8.0,
+              "roles": {
+                "Integrator": 5.0,
+                "Project Manager": 3.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Functional Design",
+          "estimated_hrs": 216,
+          "actual_hrs": 163.0,
+          "roles_actual": {
+            "Architect": 13.5,
+            "Integrator": 149.5
+          },
+          "subphases": [
+            {
+              "name": "MVP",
+              "est": null,
+              "actual": 13.0,
+              "roles": {
+                "Integrator": 13.0
+              }
+            },
+            {
+              "name": "Standard Project",
+              "est": null,
+              "actual": 136.5,
+              "roles": {
+                "Integrator": 136.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Solution Implementation",
+          "estimated_hrs": 738,
+          "actual_hrs": 713.5,
+          "roles_actual": {
+            "Integrator": 269.0,
+            "Architect": 391.0,
+            "Specialist": 53.5
+          },
+          "subphases": [
+            {
+              "name": "MVP",
+              "est": null,
+              "actual": 104.0,
+              "roles": {
+                "Integrator": 104.0
+              }
+            },
+            {
+              "name": "Standard Project",
+              "est": null,
+              "actual": 218.5,
+              "roles": {
+                "Integrator": 165.0,
+                "Specialist": 53.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "System Testing",
+          "estimated_hrs": 298,
+          "actual_hrs": 297.5,
+          "roles_actual": {
+            "Project Manager": 12.0,
+            "Integrator": 146.0,
+            "Specialist": 6.5,
+            "Architect": 133.0
+          },
+          "subphases": [
+            {
+              "name": "MVP",
+              "est": null,
+              "actual": 10.5,
+              "roles": {
+                "Project Manager": 10.5
+              }
+            },
+            {
+              "name": "Standard Project",
+              "est": null,
+              "actual": 154.0,
+              "roles": {
+                "Integrator": 146.0,
+                "Specialist": 6.5,
+                "Project Manager": 1.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Deployment",
+          "estimated_hrs": 80,
+          "actual_hrs": 70.5,
+          "roles_actual": {
+            "Architect": 31.5,
+            "Integrator": 31.0,
+            "Project Manager": 8.0
+          },
+          "subphases": [
+            {
+              "name": "MVP",
+              "est": null,
+              "actual": 26.0,
+              "roles": {
+                "Integrator": 22.0,
+                "Project Manager": 4.0
+              }
+            },
+            {
+              "name": "Standard Project",
+              "est": null,
+              "actual": 13.0,
+              "roles": {
+                "Integrator": 9.0,
+                "Project Manager": 4.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Project Management",
+          "estimated_hrs": 231,
+          "actual_hrs": 204.5,
+          "roles_actual": {
+            "Project Manager": 204.5
+          },
+          "subphases": [
+            {
+              "name": "MVP",
+              "est": null,
+              "actual": 100.5,
+              "roles": {
+                "Project Manager": 100.5
+              }
+            },
+            {
+              "name": "Standard Project",
+              "est": null,
+              "actual": 103.0,
+              "roles": {
+                "Project Manager": 103.0
+              }
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "type": "accurate",
+          "phase": "Overall",
+          "text": "Estimate came in within 10% — strong scoping accuracy for this project type."
+        },
+        {
+          "type": "underrun",
+          "phase": "Requirements Gathering",
+          "text": "Requirements Gathering came in 46% under estimate — either conservatively scoped or partially descoped."
+        }
+      ]
+    },
+    "HILCORP_APACHE_MIG": {
+      "id": "HILCORP_APACHE_MIG",
+      "name": "Hilcorp – Apache Acquisition Migration",
+      "project_type": "Migration",
+      "platform": "CygNet",
+      "scope_note": "CygNet acquisition migration with screen work, VHS history backfilling, and FMS configuration as notable scope items beyond the standard migration phases.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 1823,
+        "actual_hrs": 1558.5,
+        "variance_hrs": -264.5,
+        "variance_pct": -14.5,
+        "estimated_cost": 381372,
+        "actual_cost": 326038,
+        "invoiced_revenue": 326040.0,
+        "roles_actual": {
+          "Expert": 917.5,
+          "Integrator": 160.5,
+          "Architect": 508.5
+        },
+        "blended_rate": 209.2,
+        "team_size": 3,
+        "revenue_per_member": 108680
+      },
+      "phases": [
+        {
+          "phase": "Requirements Gathering",
+          "estimated_hrs": 60,
+          "actual_hrs": 60.0,
+          "roles_actual": {
+            "Expert": 44.0,
+            "Architect": 16.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Data Discovery, Collection & Cleanup",
+          "estimated_hrs": 140,
+          "actual_hrs": 156.0,
+          "roles_actual": {
+            "Expert": 136.5,
+            "Integrator": 12.0,
+            "Architect": 7.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Functional Design",
+          "estimated_hrs": 160,
+          "actual_hrs": 100.5,
+          "roles_actual": {
+            "Architect": 43.5,
+            "Integrator": 36.5,
+            "Expert": 24.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Solution Implementation",
+          "estimated_hrs": 804,
+          "actual_hrs": 606.5,
+          "roles_actual": {
+            "Expert": 379.5,
+            "Architect": 177.0,
+            "Integrator": 53.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "System Testing",
+          "estimated_hrs": 304,
+          "actual_hrs": 226.0,
+          "roles_actual": {
+            "Architect": 165.0,
+            "Expert": 56.5,
+            "Integrator": 4.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Deployment / Post-Cutover",
+          "estimated_hrs": 120,
+          "actual_hrs": 161.5,
+          "roles_actual": {
+            "Expert": 152.5,
+            "Architect": 11.0,
+            "Integrator": 2.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Project Management",
+          "estimated_hrs": 235,
+          "actual_hrs": 12.5,
+          "roles_actual": {
+            "Architect": 16.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "FMS Configuration",
+          "estimated_hrs": null,
+          "actual_hrs": 13.5,
+          "roles_actual": {
+            "Architect": 13.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Misc",
+          "estimated_hrs": null,
+          "actual_hrs": 34.5,
+          "roles_actual": {
+            "Expert": 18.0,
+            "Integrator": 14.0,
+            "Architect": 11.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Screen Work",
+          "estimated_hrs": null,
+          "actual_hrs": 110.0,
+          "roles_actual": {
+            "Expert": 90.0,
+            "Architect": 20.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "VHS Backfilling",
+          "estimated_hrs": null,
+          "actual_hrs": 77.5,
+          "roles_actual": {
+            "Integrator": 38.0,
+            "Architect": 27.5,
+            "Expert": 16.0
+          },
+          "subphases": []
+        }
+      ],
+      "insights": [
+        {
+          "type": "accurate",
+          "phase": "Overall",
+          "text": "Estimate came in within 15% — strong scoping accuracy for this project type."
+        },
+        {
+          "type": "underrun",
+          "phase": "Project Management",
+          "text": "Project Management came in 95% under estimate — either conservatively scoped or partially descoped."
+        }
+      ]
+    },
+    "HILCORP_EXXON_MIG": {
+      "id": "HILCORP_EXXON_MIG",
+      "name": "Hilcorp – Exxon Acquisition Migration (CygNet → Ignition)",
+      "project_type": "Migration",
+      "platform": "CygNet to Ignition",
+      "scope_note": "Multi-phase migration: Phase 1 rebuilt CygNet data in Ignition (routes, screens, logic); Phase 2 migrated the remaining CygNet footprint; Phase 3 handled Apache/Exxon cleanup. Complex dual-platform engagement.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 3036,
+        "actual_hrs": 2250.5,
+        "variance_hrs": -785.5,
+        "variance_pct": -25.9,
+        "estimated_cost": 588073,
+        "actual_cost": 435922,
+        "invoiced_revenue": 435922.5,
+        "roles_actual": {
+          "Integrator": 495.0,
+          "Architect": 728.0,
+          "Expert": 1113.5,
+          "Specialist": 1.5
+        },
+        "blended_rate": 193.7,
+        "team_size": 3,
+        "revenue_per_member": 145308
+      },
+      "phases": [
+        {
+          "phase": "Ignition Phase – Data Analysis & Discovery",
+          "estimated_hrs": 40,
+          "actual_hrs": 2009.5,
+          "roles_actual": {
+            "Integrator": 491.5,
+            "Architect": 591.0,
+            "Expert": 1007.5
+          },
+          "subphases": [
+            {
+              "name": "Analysis & Data Discovery",
+              "est": null,
+              "actual": 190.0,
+              "roles": {
+                "Integrator": 107.5,
+                "Architect": 66.0,
+                "Expert": 40.0
+              }
+            },
+            {
+              "name": "Andrews Route Integration -Ignition",
+              "est": null,
+              "actual": 565.5,
+              "roles": {
+                "Expert": 310.5,
+                "Architect": 173.0,
+                "Integrator": 82.0
+              }
+            },
+            {
+              "name": "Ignition Deployment & Post Cutover Support",
+              "est": null,
+              "actual": 222.5,
+              "roles": {
+                "Expert": 147.5,
+                "Architect": 76.0,
+                "Integrator": 1.0
+              }
+            },
+            {
+              "name": "Ignition Solution Implementation",
+              "est": null,
+              "actual": 560.5,
+              "roles": {
+                "Integrator": 253.5,
+                "Architect": 211.5,
+                "Expert": 111.5
+              }
+            },
+            {
+              "name": "Ignition Testing",
+              "est": null,
+              "actual": 19.0,
+              "roles": {
+                "Integrator": 47.5,
+                "Architect": 10.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Ignition Phase – Solution Implementation",
+          "estimated_hrs": 120,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Ignition Phase – Routes Integration",
+          "estimated_hrs": 160,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Ignition Phase – Testing",
+          "estimated_hrs": 120,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Ignition Phase – Deployment",
+          "estimated_hrs": 120,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "CygNet Phase – Requirements Gathering",
+          "estimated_hrs": 40,
+          "actual_hrs": 169.5,
+          "roles_actual": {
+            "Architect": 63.5,
+            "Expert": 103.0,
+            "Integrator": 2.5,
+            "Specialist": 1.5
+          },
+          "subphases": [
+            {
+              "name": "Cygnet Solution Implementation",
+              "est": null,
+              "actual": 1.0,
+              "roles": {
+                "Architect": 1.0
+              }
+            },
+            {
+              "name": "Data Discovery, Collection, & Cleanup",
+              "est": null,
+              "actual": 46.5,
+              "roles": {
+                "Expert": 24.0,
+                "Architect": 21.0,
+                "Integrator": 1.5
+              }
+            },
+            {
+              "name": "Deployment & Post Cutover Support",
+              "est": null,
+              "actual": 4.0,
+              "roles": {
+                "Architect": 4.0,
+                "Expert": 1.0
+              }
+            },
+            {
+              "name": "Functional Design",
+              "est": null,
+              "actual": 79.5,
+              "roles": {
+                "Expert": 51.5,
+                "Architect": 28.0
+              }
+            },
+            {
+              "name": "Requirements Gathering",
+              "est": null,
+              "actual": 38.5,
+              "roles": {
+                "Expert": 26.5,
+                "Architect": 9.5,
+                "Specialist": 1.5,
+                "Integrator": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "CygNet Phase – Data Discovery",
+          "estimated_hrs": 40,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "CygNet Phase – Functional Design",
+          "estimated_hrs": 80,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "CygNet Phase – Solution Implementation",
+          "estimated_hrs": 640,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Project Management",
+          "estimated_hrs": 396,
+          "actual_hrs": 70.5,
+          "roles_actual": {
+            "Architect": 73.5,
+            "Expert": 3.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Cleanup (Apache/Exxon)",
+          "estimated_hrs": 320,
+          "actual_hrs": 1.0,
+          "roles_actual": {
+            "Integrator": 1.0
+          },
+          "subphases": [
+            {
+              "name": "Cleanup (Apache & Exxon Acquisition)",
+              "est": null,
+              "actual": 1.0,
+              "roles": {
+                "Integrator": 1.0
+              }
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "type": "underrun",
+          "phase": "Overall",
+          "text": "Project came in 26% under estimate (-786h). May indicate conservative scoping, partial scope delivered, or efficiency gains."
+        },
+        {
+          "type": "overrun",
+          "phase": "Ignition Phase – Data Analysis & Discovery",
+          "text": "Ignition Phase – Data Analysis & Discovery ran 4924% over (2009.5h actual vs 40h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        },
+        {
+          "type": "overrun",
+          "phase": "CygNet Phase – Requirements Gathering",
+          "text": "CygNet Phase – Requirements Gathering ran 324% over (169.5h actual vs 40h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        },
+        {
+          "type": "underrun",
+          "phase": "Project Management",
+          "text": "Project Management came in 82% under estimate — either conservatively scoped or partially descoped."
+        },
+        {
+          "type": "underrun",
+          "phase": "Cleanup (Apache/Exxon)",
+          "text": "Cleanup (Apache/Exxon) came in 100% under estimate — either conservatively scoped or partially descoped."
+        }
+      ]
+    },
+    "TG_IGNITION_MIG": {
+      "id": "TG_IGNITION_MIG",
+      "name": "TG Natural Resources – Ignition Migration (2024)",
+      "project_type": "Migration",
+      "platform": "CygNet to Ignition",
+      "scope_note": "Acquisition migration to Ignition. Post-cutover support ran 374% over estimate — plan for extended hypercare on Ignition platform transitions.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 1644,
+        "actual_hrs": 1284.5,
+        "variance_hrs": -359.5,
+        "variance_pct": -21.9,
+        "estimated_cost": 285316,
+        "actual_cost": 222925,
+        "invoiced_revenue": 222922.5,
+        "roles_actual": {
+          "Integrator": 588.5,
+          "Expert": 656.0,
+          "Specialist": 3.0,
+          "Project Manager": 115.5
+        },
+        "blended_rate": 173.55,
+        "team_size": 3,
+        "revenue_per_member": 74308
+      },
+      "phases": [
+        {
+          "phase": "Requirements Gathering",
+          "estimated_hrs": 120,
+          "actual_hrs": 870.0,
+          "roles_actual": {
+            "Integrator": 462.0,
+            "Expert": 483.0,
+            "Specialist": 3.0
+          },
+          "subphases": [
+            {
+              "name": "Data Discovery, Collection, Cleanup",
+              "est": null,
+              "actual": 159.0,
+              "roles": {
+                "Integrator": 88.0,
+                "Expert": 71.0
+              }
+            },
+            {
+              "name": "Deployment",
+              "est": null,
+              "actual": 47.5,
+              "roles": {
+                "Expert": 37.5,
+                "Integrator": 10.0
+              }
+            },
+            {
+              "name": "Requirements Gathering",
+              "est": null,
+              "actual": 66.5,
+              "roles": {
+                "Expert": 52.5,
+                "Integrator": 19.5
+              }
+            },
+            {
+              "name": "Solution Implementation",
+              "est": null,
+              "actual": 448.0,
+              "roles": {
+                "Integrator": 312.0,
+                "Expert": 208.5
+              }
+            },
+            {
+              "name": "System Testing",
+              "est": null,
+              "actual": 149.0,
+              "roles": {
+                "Expert": 113.5,
+                "Integrator": 32.5,
+                "Specialist": 3.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Data Discovery & Design",
+          "estimated_hrs": 400,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Solution Implementation",
+          "estimated_hrs": 420,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "System Testing",
+          "estimated_hrs": 240,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Deployment",
+          "estimated_hrs": 180,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Post-Cutover Support",
+          "estimated_hrs": 80,
+          "actual_hrs": 299.0,
+          "roles_actual": {
+            "Expert": 173.0,
+            "Integrator": 126.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Project Management",
+          "estimated_hrs": 204,
+          "actual_hrs": 115.5,
+          "roles_actual": {
+            "Project Manager": 115.5
+          },
+          "subphases": []
+        }
+      ],
+      "insights": [
+        {
+          "type": "underrun",
+          "phase": "Overall",
+          "text": "Project came in 22% under estimate (-360h). May indicate conservative scoping, partial scope delivered, or efficiency gains."
+        },
+        {
+          "type": "overrun",
+          "phase": "Requirements Gathering",
+          "text": "Requirements Gathering ran 625% over (870.0h actual vs 120h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        },
+        {
+          "type": "overrun",
+          "phase": "Post-Cutover Support",
+          "text": "Post-Cutover Support ran 274% over (299.0h actual vs 80h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        },
+        {
+          "type": "underrun",
+          "phase": "Project Management",
+          "text": "Project Management came in 43% under estimate — either conservatively scoped or partially descoped."
+        }
+      ]
+    },
+    "WAPITI_ONPING_MIG": {
+      "id": "WAPITI_ONPING_MIG",
+      "name": "Wapiti – OnPing to CygNet Migration",
+      "project_type": "Migration",
+      "platform": "OnPing to CygNet",
+      "scope_note": "Multi-site OnPing migration to CygNet across three sites: Natural Buttes, RiverBend, and Wyoming. Estimate was built site-by-site. Actuals reflect the completed portion of scope.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 1610,
+        "actual_hrs": 884.0,
+        "variance_hrs": -726.0,
+        "variance_pct": -45.1,
+        "estimated_cost": 313950,
+        "actual_cost": 172380,
+        "invoiced_revenue": 172380.0,
+        "roles_actual": {
+          "Expert": 329.0,
+          "Integrator": 555.0
+        },
+        "blended_rate": 195.0,
+        "team_size": 2,
+        "revenue_per_member": 86190
+      },
+      "phases": [
+        {
+          "phase": "Requirements Gathering",
+          "estimated_hrs": 30,
+          "actual_hrs": 9.5,
+          "roles_actual": {
+            "Expert": 3.5,
+            "Integrator": 6.0
+          },
+          "subphases": [
+            {
+              "name": "Riverbend - Requirements Gathering",
+              "est": null,
+              "actual": 5.0,
+              "roles": {
+                "Integrator": 4.0,
+                "Expert": 1.0
+              }
+            },
+            {
+              "name": "Wyoming - Requirements Gathering",
+              "est": null,
+              "actual": 1.0,
+              "roles": {
+                "Integrator": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Data Discovery, Collection & Cleanup",
+          "estimated_hrs": 80,
+          "actual_hrs": 22.5,
+          "roles_actual": {
+            "Expert": 15.5,
+            "Integrator": 7.0
+          },
+          "subphases": [
+            {
+              "name": "Riverbend - Data Discovery, collection and cleanup",
+              "est": null,
+              "actual": 0.5,
+              "roles": {
+                "Expert": 0.5
+              }
+            },
+            {
+              "name": "Wyoming - Data Discovery, Collection and Cleanup",
+              "est": null,
+              "actual": 1.0,
+              "roles": {
+                "Integrator": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Functional Design",
+          "estimated_hrs": 100,
+          "actual_hrs": 39.5,
+          "roles_actual": {
+            "Integrator": 24.5,
+            "Expert": 15.0
+          },
+          "subphases": [
+            {
+              "name": "Riverbend - Functional Design",
+              "est": null,
+              "actual": 3.0,
+              "roles": {
+                "Integrator": 3.0
+              }
+            },
+            {
+              "name": "Wyoming - Functional Design",
+              "est": null,
+              "actual": 11.5,
+              "roles": {
+                "Integrator": 6.0,
+                "Expert": 5.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Solution Implementation",
+          "estimated_hrs": 900,
+          "actual_hrs": 480.0,
+          "roles_actual": {
+            "Expert": 244.5,
+            "Integrator": 235.5
+          },
+          "subphases": [
+            {
+              "name": "Riverbend -Solution Implementation",
+              "est": null,
+              "actual": 179.5,
+              "roles": {
+                "Expert": 98.0,
+                "Integrator": 81.5
+              }
+            },
+            {
+              "name": "Wyoming - Solution Implementations",
+              "est": null,
+              "actual": 40.5,
+              "roles": {
+                "Integrator": 27.0,
+                "Expert": 13.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "System Testing",
+          "estimated_hrs": 200,
+          "actual_hrs": 41.0,
+          "roles_actual": {
+            "Expert": 36.5,
+            "Integrator": 4.5
+          },
+          "subphases": [
+            {
+              "name": "Riverbend - Testing",
+              "est": null,
+              "actual": 11.0,
+              "roles": {
+                "Expert": 11.0
+              }
+            },
+            {
+              "name": "Wyoming - Testing",
+              "est": null,
+              "actual": 2.0,
+              "roles": {
+                "Integrator": 1.0,
+                "Expert": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Deployment / Post-Cutover",
+          "estimated_hrs": 200,
+          "actual_hrs": 291.5,
+          "roles_actual": {
+            "Integrator": 277.5,
+            "Expert": 14.0
+          },
+          "subphases": [
+            {
+              "name": "Riverbend - Deployment and Post cutover support",
+              "est": null,
+              "actual": 165.0,
+              "roles": {
+                "Integrator": 165.0
+              }
+            },
+            {
+              "name": "Wyoming - Deployment & Post Cutover Support",
+              "est": null,
+              "actual": 22.0,
+              "roles": {
+                "Integrator": 22.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Project Management",
+          "estimated_hrs": 100,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        }
+      ],
+      "insights": [
+        {
+          "type": "underrun",
+          "phase": "Overall",
+          "text": "Project came in 45% under estimate (-726h). May indicate conservative scoping, partial scope delivered, or efficiency gains."
+        },
+        {
+          "type": "underrun",
+          "phase": "Data Discovery, Collection & Cleanup",
+          "text": "Data Discovery, Collection & Cleanup came in 72% under estimate — either conservatively scoped or partially descoped."
+        },
+        {
+          "type": "underrun",
+          "phase": "Functional Design",
+          "text": "Functional Design came in 60% under estimate — either conservatively scoped or partially descoped."
+        },
+        {
+          "type": "underrun",
+          "phase": "Solution Implementation",
+          "text": "Solution Implementation came in 47% under estimate — either conservatively scoped or partially descoped."
+        },
+        {
+          "type": "underrun",
+          "phase": "System Testing",
+          "text": "System Testing came in 80% under estimate — either conservatively scoped or partially descoped."
+        }
+      ]
+    },
+    "CONOCO_PERM_STD_V2": {
+      "id": "CONOCO_PERM_STD_V2",
+      "name": "ConocoPhillips – Permian Standardization (Multi-Region)",
+      "project_type": "Reimplementation / Standardization",
+      "platform": "CygNet",
+      "scope_note": "Three-region CygNet standardization: Delaware, DB South, PM Shale. Each region independently scoped with implementation (~850h), testing (~143h), and deployment (~60h) phases. Merger implementation added as a separate phase.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 4859,
+        "actual_hrs": 5292.8,
+        "variance_hrs": 433.8,
+        "variance_pct": 8.9,
+        "estimated_cost": 661699,
+        "actual_cost": 720767,
+        "invoiced_revenue": 720746.25,
+        "roles_actual": {
+          "Integrator": 2723.5,
+          "Specialist": 1113.0,
+          "Architect": 973.5,
+          "Expert": 641.0,
+          "Project Manager": 561.7
+        },
+        "blended_rate": 136.18,
+        "team_size": 5,
+        "revenue_per_member": 144149
+      },
+      "phases": [
+        {
+          "phase": "Cleanup / Pre-work",
+          "estimated_hrs": 228,
+          "actual_hrs": 563.5,
+          "roles_actual": {
+            "Integrator": 408.5,
+            "Expert": 121.5,
+            "Architect": 118.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Requirements Gathering",
+          "estimated_hrs": 100,
+          "actual_hrs": 163.5,
+          "roles_actual": {
+            "Integrator": 170.0,
+            "Architect": 14.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Standard Design and Analysis",
+          "estimated_hrs": 508,
+          "actual_hrs": 612.0,
+          "roles_actual": {
+            "Integrator": 233.5,
+            "Specialist": 223.5,
+            "Architect": 195.5,
+            "Expert": 171.0,
+            "Project Manager": 1.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Implementation (All Regions)",
+          "estimated_hrs": 2400,
+          "actual_hrs": 2599.5,
+          "roles_actual": {
+            "Integrator": 1585.5,
+            "Architect": 370.0,
+            "Specialist": 737.0,
+            "Expert": 175.5
+          },
+          "subphases": [
+            {
+              "name": "DB South Standards Implementation",
+              "est": null,
+              "actual": 272.5,
+              "roles": {
+                "Integrator": 266.5,
+                "Architect": 11.0
+              }
+            },
+            {
+              "name": "Delware Standards Implementation",
+              "est": null,
+              "actual": 58.0,
+              "roles": {
+                "Integrator": 63.0
+              }
+            },
+            {
+              "name": "PM Shale Standards Implementation",
+              "est": null,
+              "actual": 2038.0,
+              "roles": {
+                "Integrator": 1188.0,
+                "Specialist": 731.0,
+                "Architect": 359.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Testing (All Regions)",
+          "estimated_hrs": 430,
+          "actual_hrs": 348.5,
+          "roles_actual": {
+            "Integrator": 191.5,
+            "Architect": 97.5,
+            "Specialist": 32.0,
+            "Expert": 41.5
+          },
+          "subphases": [
+            {
+              "name": "PM Shale Standards Testing",
+              "est": null,
+              "actual": 305.5,
+              "roles": {
+                "Integrator": 182.0,
+                "Architect": 97.5,
+                "Specialist": 32.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Deployment (All Regions)",
+          "estimated_hrs": 180,
+          "actual_hrs": 39.5,
+          "roles_actual": {
+            "Integrator": 36.0,
+            "Architect": 3.5
+          },
+          "subphases": [
+            {
+              "name": "DB South Standards Deployment",
+              "est": null,
+              "actual": 13.0,
+              "roles": {
+                "Integrator": 13.0
+              }
+            },
+            {
+              "name": "PM Shale Standards Deployment",
+              "est": null,
+              "actual": 26.5,
+              "roles": {
+                "Integrator": 23.0,
+                "Architect": 3.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Merger Implementation",
+          "estimated_hrs": 205,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Project Management",
+          "estimated_hrs": 604,
+          "actual_hrs": 453.2,
+          "roles_actual": {
+            "Project Manager": 445.2,
+            "Architect": 33.0,
+            "Expert": 3.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Travel / Miscellaneous",
+          "estimated_hrs": null,
+          "actual_hrs": 159.5,
+          "roles_actual": {
+            "Project Manager": 72.5,
+            "Architect": 63.0,
+            "Expert": 31.5,
+            "Integrator": 16.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "PMShale Maintenance",
+          "estimated_hrs": null,
+          "actual_hrs": 89.5,
+          "roles_actual": {
+            "Specialist": 105.0,
+            "Architect": 0.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Project Meetings",
+          "estimated_hrs": null,
+          "actual_hrs": 255.5,
+          "roles_actual": {
+            "Expert": 91.0,
+            "Integrator": 80.5,
+            "Architect": 77.0,
+            "Project Manager": 43.0,
+            "Specialist": 15.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Support",
+          "estimated_hrs": null,
+          "actual_hrs": 8.5,
+          "roles_actual": {
+            "Integrator": 2.0,
+            "Architect": 0.5,
+            "Expert": 6.0
+          },
+          "subphases": []
+        }
+      ],
+      "insights": [
+        {
+          "type": "accurate",
+          "phase": "Overall",
+          "text": "Estimate came in within 9% — strong scoping accuracy for this project type."
+        },
+        {
+          "type": "overrun",
+          "phase": "Cleanup / Pre-work",
+          "text": "Cleanup / Pre-work ran 147% over (563.5h actual vs 228h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        },
+        {
+          "type": "overrun",
+          "phase": "Requirements Gathering",
+          "text": "Requirements Gathering ran 64% over (163.5h actual vs 100h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        },
+        {
+          "type": "underrun",
+          "phase": "Deployment (All Regions)",
+          "text": "Deployment (All Regions) came in 78% under estimate — either conservatively scoped or partially descoped."
+        }
+      ]
+    },
+    "CONOCO_DBSOUTH_STD": {
+      "id": "CONOCO_DBSOUTH_STD",
+      "name": "ConocoPhillips – DBSouth/Delaware Standardization & Merger",
+      "project_type": "Reimplementation / Standardization",
+      "platform": "CygNet",
+      "scope_note": "Dual-scope engagement: standardize two CygNet regions (DBSouth and hCXO) then merge them into a single unified system. Merger implementation ran 68% over estimate due to data reconciliation complexity.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 3324,
+        "actual_hrs": 4102.2,
+        "variance_hrs": 778.2,
+        "variance_pct": 23.4,
+        "estimated_cost": 441394,
+        "actual_cost": 544738,
+        "invoiced_revenue": 544728.75,
+        "roles_actual": {
+          "Integrator": 2355.0,
+          "Specialist": 814.0,
+          "Architect": 623.0,
+          "Expert": 109.5,
+          "Project Manager": 499.7
+        },
+        "blended_rate": 132.79,
+        "team_size": 5,
+        "revenue_per_member": 108946
+      },
+      "phases": [
+        {
+          "phase": "Requirements Gathering",
+          "estimated_hrs": 223,
+          "actual_hrs": 219.0,
+          "roles_actual": {
+            "Integrator": 127.0,
+            "Specialist": 61.5,
+            "Expert": 33.0,
+            "Architect": 28.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Design, Documentation & Analysis",
+          "estimated_hrs": 637,
+          "actual_hrs": 697.5,
+          "roles_actual": {
+            "Integrator": 422.5,
+            "Specialist": 152.0,
+            "Architect": 89.5,
+            "Expert": 71.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Standardization Implementation",
+          "estimated_hrs": 1028,
+          "actual_hrs": 690.5,
+          "roles_actual": {
+            "Integrator": 496.0,
+            "Specialist": 118.0,
+            "Architect": 92.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Merger Implementation, Testing",
+          "estimated_hrs": 871,
+          "actual_hrs": 721.5,
+          "roles_actual": {
+            "Integrator": 572.5,
+            "Architect": 116.0,
+            "Specialist": 71.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Project Management",
+          "estimated_hrs": 410,
+          "actual_hrs": 475.2,
+          "roles_actual": {
+            "Project Manager": 471.8,
+            "Architect": 10.5,
+            "Expert": 3.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Post Cutover",
+          "estimated_hrs": 80,
+          "actual_hrs": 128.5,
+          "roles_actual": {
+            "Integrator": 152.5,
+            "Specialist": 51.0,
+            "Architect": 29.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Maintenance",
+          "estimated_hrs": null,
+          "actual_hrs": 23.5,
+          "roles_actual": {
+            "Specialist": 28.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Merger Deployment",
+          "estimated_hrs": null,
+          "actual_hrs": 126.0,
+          "roles_actual": {
+            "Integrator": 76.0,
+            "Specialist": 27.5,
+            "Architect": 24.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Merger Testing",
+          "estimated_hrs": null,
+          "actual_hrs": 619.0,
+          "roles_actual": {
+            "Integrator": 293.5,
+            "Specialist": 205.5,
+            "Architect": 155.5,
+            "Project Manager": 1.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Project Meetings",
+          "estimated_hrs": null,
+          "actual_hrs": 19.5,
+          "roles_actual": {
+            "Integrator": 13.0,
+            "Architect": 9.0,
+            "Specialist": 6.5,
+            "Project Manager": 4.5,
+            "Expert": 2.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Standardization Testing",
+          "estimated_hrs": null,
+          "actual_hrs": 322.5,
+          "roles_actual": {
+            "Integrator": 202.0,
+            "Specialist": 86.0,
+            "Architect": 37.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Travel",
+          "estimated_hrs": null,
+          "actual_hrs": 59.5,
+          "roles_actual": {
+            "Architect": 30.5,
+            "Project Manager": 22.0,
+            "Specialist": 7.0
+          },
+          "subphases": []
+        }
+      ],
+      "insights": [
+        {
+          "type": "overrun",
+          "phase": "Overall",
+          "text": "Project ran 23% over estimate (+778h). Common causes: unscoped CygNet objects, late-stage scope additions, or data quality issues discovered mid-project."
+        },
+        {
+          "type": "overrun",
+          "phase": "Post Cutover",
+          "text": "Post Cutover ran 61% over (128.5h actual vs 80h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        }
+      ]
+    },
+    "BKV_UPGRADE": {
+      "id": "BKV_UPGRADE",
+      "name": "BKV – CygNet Software Upgrade",
+      "project_type": "Upgrade",
+      "platform": "CygNet",
+      "scope_note": "Single-site CygNet version upgrade. Post-cutover support ran 3x estimate (40h est → 120.5h actual). Always budget additional hypercare buffer for production CygNet upgrades.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 222,
+        "actual_hrs": 258.5,
+        "variance_hrs": 36.5,
+        "variance_pct": 16.4,
+        "estimated_cost": 49013,
+        "actual_cost": 57072,
+        "invoiced_revenue": 57070.5,
+        "roles_actual": {
+          "Architect": 176.5,
+          "Expert": 14.0,
+          "Project Manager": 68.0,
+          "Specialist": 10.5,
+          "Integrator": 1.0
+        },
+        "blended_rate": 220.78,
+        "team_size": 2,
+        "revenue_per_member": 28535
+      },
+      "phases": [
+        {
+          "phase": "CygNet Upgrade",
+          "estimated_hrs": 128,
+          "actual_hrs": 88.5,
+          "roles_actual": {
+            "Architect": 59.0,
+            "Expert": 14.0,
+            "Project Manager": 9.5,
+            "Specialist": 7.5,
+            "Integrator": 1.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Deployment",
+          "estimated_hrs": 24,
+          "actual_hrs": null,
+          "roles_actual": {},
+          "subphases": []
+        },
+        {
+          "phase": "Post-Cutover Support",
+          "estimated_hrs": 40,
+          "actual_hrs": 120.5,
+          "roles_actual": {
+            "Architect": 102.0,
+            "Project Manager": 16.0,
+            "Specialist": 3.0
+          },
+          "subphases": [
+            {
+              "name": "Redundancy",
+              "est": null,
+              "actual": 88.5,
+              "roles": {
+                "Architect": 72.5,
+                "Project Manager": 13.0,
+                "Specialist": 3.0
+              }
+            },
+            {
+              "name": "SVCMON",
+              "est": null,
+              "actual": 19.5,
+              "roles": {
+                "Architect": 18.0,
+                "Project Manager": 1.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Project Management",
+          "estimated_hrs": 30,
+          "actual_hrs": 18.5,
+          "roles_actual": {
+            "Project Manager": 24.5
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Meetings",
+          "estimated_hrs": null,
+          "actual_hrs": 15.0,
+          "roles_actual": {
+            "Architect": 12.0,
+            "Project Manager": 3.0
+          },
+          "subphases": []
+        },
+        {
+          "phase": "Misc.",
+          "estimated_hrs": null,
+          "actual_hrs": 16.0,
+          "roles_actual": {
+            "Project Manager": 15.0,
+            "Architect": 3.5
+          },
+          "subphases": []
+        }
+      ],
+      "insights": [
+        {
+          "type": "overrun",
+          "phase": "Overall",
+          "text": "Project ran 16% over estimate (+36h). Common causes: unscoped CygNet objects, late-stage scope additions, or data quality issues discovered mid-project."
+        },
+        {
+          "type": "overrun",
+          "phase": "Post-Cutover Support",
+          "text": "Post-Cutover Support ran 201% over (120.5h actual vs 40h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        }
+      ]
+    },
+    "CONOCO_UPGRADE": {
+      "id": "CONOCO_UPGRADE",
+      "name": "ConocoPhillips – CygNet Upgrade (5-Region)",
+      "project_type": "Upgrade",
+      "platform": "CygNet",
+      "scope_note": "Sequential upgrade across 5 regions (SYSMSTR/PLOT, UINTA/PANHANDLE/ANADARKO, DELAWARE/PMSHALE/MIDLAND, BAKKEN, EGLFRD). Each region phased independently with ~160–200h per region. Estimate accuracy was excellent at -9% overall.",
+      "data_source": "ConnectWise actuals + Spend Summary estimate",
+      "totals": {
+        "estimated_hrs": 864,
+        "actual_hrs": 789.0,
+        "variance_hrs": -75.0,
+        "variance_pct": -8.7,
+        "estimated_cost": 121236,
+        "actual_cost": 110712,
+        "invoiced_revenue": 110712.5,
+        "roles_actual": {
+          "Project Manager": 248.5,
+          "Integrator": 436.9,
+          "Specialist": 2.8,
+          "Architect": 9.0,
+          "Expert": 99.0
+        },
+        "blended_rate": 140.32,
+        "team_size": 3,
+        "revenue_per_member": 36904
+      },
+      "phases": [
+        {
+          "phase": "Phase 1 – SYSMSTR, PLOTEIS",
+          "estimated_hrs": 192,
+          "actual_hrs": 4.5,
+          "roles_actual": {
+            "Project Manager": 3.5,
+            "Expert": 1.0
+          },
+          "subphases": [
+            {
+              "name": "Phase 1 - SYSMSTR, PLOT",
+              "est": null,
+              "actual": 4.5,
+              "roles": {
+                "Project Manager": 3.5,
+                "Expert": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Phase 2 – UINTA, PANHANDL, ANADARKO",
+          "estimated_hrs": 184,
+          "actual_hrs": 188.2,
+          "roles_actual": {
+            "Integrator": 84.8,
+            "Project Manager": 63.5,
+            "Expert": 39.0,
+            "Architect": 2.0
+          },
+          "subphases": [
+            {
+              "name": "Uinta, Panhandle, Anadarko",
+              "est": null,
+              "actual": 188.2,
+              "roles": {
+                "Integrator": 84.8,
+                "Project Manager": 63.5,
+                "Expert": 39.0,
+                "Architect": 2.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Phase 3 – DELAWARE, PMSHALE, MIDLAND",
+          "estimated_hrs": 160,
+          "actual_hrs": 195.5,
+          "roles_actual": {
+            "Integrator": 122.5,
+            "Project Manager": 43.2,
+            "Expert": 25.5,
+            "Architect": 6.5,
+            "Specialist": 1.2
+          },
+          "subphases": [
+            {
+              "name": "Delaware, PMShale, Midland, Odessa",
+              "est": null,
+              "actual": 195.5,
+              "roles": {
+                "Integrator": 122.5,
+                "Project Manager": 43.2,
+                "Expert": 25.5,
+                "Architect": 6.5,
+                "Specialist": 1.2
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Phase 4 – BAKKEN",
+          "estimated_hrs": 192,
+          "actual_hrs": 106.8,
+          "roles_actual": {
+            "Integrator": 68.2,
+            "Project Manager": 29.5,
+            "Expert": 9.0
+          },
+          "subphases": [
+            {
+              "name": "Bakken",
+              "est": null,
+              "actual": 106.8,
+              "roles": {
+                "Integrator": 68.2,
+                "Project Manager": 29.5,
+                "Expert": 9.0
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Phase 5 – EGLFRD",
+          "estimated_hrs": 120,
+          "actual_hrs": 191.5,
+          "roles_actual": {
+            "Integrator": 138.5,
+            "Project Manager": 29.5,
+            "Expert": 23.5
+          },
+          "subphases": [
+            {
+              "name": "Eagle Ford",
+              "est": null,
+              "actual": 191.5,
+              "roles": {
+                "Integrator": 138.5,
+                "Project Manager": 29.5,
+                "Expert": 23.5
+              }
+            }
+          ]
+        },
+        {
+          "phase": "Project Review",
+          "estimated_hrs": 16,
+          "actual_hrs": 102.5,
+          "roles_actual": {
+            "Project Manager": 79.2,
+            "Integrator": 22.8,
+            "Specialist": 1.5,
+            "Architect": 0.5,
+            "Expert": 1.0
+          },
+          "subphases": [
+            {
+              "name": "Project Management",
+              "est": null,
+              "actual": 89.5,
+              "roles": {
+                "Project Manager": 69.0,
+                "Integrator": 18.5,
+                "Specialist": 1.5,
+                "Architect": 0.5
+              }
+            },
+            {
+              "name": "Project Meetings",
+              "est": null,
+              "actual": 6.0,
+              "roles": {
+                "Integrator": 4.2,
+                "Project Manager": 3.2,
+                "Expert": 1.0
+              }
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "type": "accurate",
+          "phase": "Overall",
+          "text": "Estimate came in within 9% — strong scoping accuracy for this project type."
+        },
+        {
+          "type": "underrun",
+          "phase": "Phase 1 – SYSMSTR, PLOTEIS",
+          "text": "Phase 1 – SYSMSTR, PLOTEIS came in 98% under estimate — either conservatively scoped or partially descoped."
+        },
+        {
+          "type": "underrun",
+          "phase": "Phase 4 – BAKKEN",
+          "text": "Phase 4 – BAKKEN came in 44% under estimate — either conservatively scoped or partially descoped."
+        },
+        {
+          "type": "overrun",
+          "phase": "Phase 5 – EGLFRD",
+          "text": "Phase 5 – EGLFRD ran 60% over (191.5h actual vs 120h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
+        },
+        {
+          "type": "overrun",
+          "phase": "Project Review",
+          "text": "Project Review ran 541% over (102.5h actual vs 16h estimated). This is a common pattern in CygNet projects where scope expands during implementation."
         }
       ]
     }
+  },
+  "complexity_model": {
+    "_note": "Calibrated from 10 completed projects. Use as starting point; adjust with scope notes.",
+    "Migration": {
+      "_note": "CygNet-to-CygNet acquisition migration baseline",
+      "base_hrs": 250,
+      "per_facility": 12,
+      "per_100_points": 10,
+      "per_screen": 6,
+      "per_100_devices": 8,
+      "per_script": 3,
+      "complexity_range": {
+        "low": 0.8,
+        "medium": 1.0,
+        "high": 1.35,
+        "very_high": 1.75
+      },
+      "typical_range_hrs": [
+        500,
+        2000
+      ],
+      "calibration_projects": [
+        "Hilcorp XTO: 1594h",
+        "Hilcorp Apache: 1558h",
+        "Wapiti: 884h"
+      ]
+    },
+    "Migration_to_Ignition": {
+      "_note": "CygNet-to-Ignition or platform migration. Higher per-unit cost due to screen rebuild.",
+      "base_hrs": 350,
+      "per_facility": 20,
+      "per_100_points": 15,
+      "per_screen": 12,
+      "per_100_devices": 10,
+      "per_script": 5,
+      "complexity_range": {
+        "low": 0.8,
+        "medium": 1.0,
+        "high": 1.35,
+        "very_high": 1.75
+      },
+      "typical_range_hrs": [
+        1000,
+        4000
+      ],
+      "calibration_projects": [
+        "Hilcorp Exxon: 2250h",
+        "TG Natural Resources: 1284h"
+      ]
+    },
+    "Reimplementation / Standardization": {
+      "_note": "CygNet standardization across one or more regions",
+      "base_hrs": 400,
+      "per_region": 500,
+      "per_100_points": 5,
+      "per_screen": 4,
+      "per_facility": 8,
+      "complexity_range": {
+        "low": 0.8,
+        "medium": 1.0,
+        "high": 1.3,
+        "very_high": 1.6
+      },
+      "typical_range_hrs": [
+        1500,
+        10000
+      ],
+      "calibration_projects": [
+        "ConocoPhillips Permian: 5292h (3 regions)",
+        "DBSouth/Delaware: 4102h (2 regions + merger)"
+      ]
+    },
+    "Upgrade": {
+      "_note": "CygNet version upgrade. Scale primarily by number of servers/sites.",
+      "base_hrs": 60,
+      "per_server": 50,
+      "per_region": 150,
+      "post_cutover_buffer_pct": 0.3,
+      "complexity_range": {
+        "low": 0.8,
+        "medium": 1.0,
+        "high": 1.3
+      },
+      "typical_range_hrs": [
+        150,
+        1500
+      ],
+      "calibration_projects": [
+        "BKV Upgrade: 258h (1 site)",
+        "ConocoPhillips Upgrade: 789h (5 regions)"
+      ]
+    }
+  },
+  "_meta": {
+    "total_actuals_hours": 51625.6,
+    "projects_analyzed": 17,
+    "example_projects_count": 13,
+    "last_updated": "2026-04-30"
   }
 }
